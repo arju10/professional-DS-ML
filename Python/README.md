@@ -7,3 +7,5 @@ Key Features of Dictionary:
 - 
 - Accessing key-values or values
 - Insert new key-value pair
+- Modify dictionary
+- Remove Key-value pair
