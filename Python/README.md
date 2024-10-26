@@ -6,6 +6,7 @@ Dictionary is one kind of data structer in python which is allowed to access and
 Key Features of Dictionary:
 - 
 - Accessing key-values or values
-- Insert new key-value pair
-- Modify dictionary
-- Remove Key-value pair
+- Retrives keys, values and key-values pair
+- Insert/Add new key-value pair
+- Modify/Update dictionary
+- Remove/Delete Key-value pair
