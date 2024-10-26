@@ -10,3 +10,9 @@ Key Features of Dictionary:
 - Insert/Add new key-value pair
 - Modify/Update dictionary
 - Remove/Delete Key-value pair
+
+## 2. List
+A list is a collection of items in python, created using square brackets [] . List can contain different data types, including numbers, strings and other lists
+
+Key Features of Dictionary:
+- 
