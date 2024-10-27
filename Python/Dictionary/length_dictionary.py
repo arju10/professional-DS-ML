@@ -7,4 +7,4 @@ people_info = {'name':'John', 'age':25, 'city':"New York"}
 dict_length = len(people_info)
 
 # Print the created dictionary
-print("Created Dictionary", dict_length)
+print("Length of Dictionary", dict_length)
