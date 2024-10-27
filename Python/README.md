@@ -16,3 +16,4 @@ A list is a collection of items in python, created using square brackets [] . Li
 
 Key Features of Dictionary:
 - 
+- Accessing key-values or values
