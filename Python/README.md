@@ -20,3 +20,4 @@ Key Features of Dictionary:
 - Insert/Add new values
 - Modify/Update list
 - Remove/Delete element
+- Retrive list element
