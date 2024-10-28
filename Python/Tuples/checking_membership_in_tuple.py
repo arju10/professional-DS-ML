@@ -1,8 +1,8 @@
-# 'in' keyword is used to check a keyword exists in a list or not
+# 'in' keyword is used to check a keyword exists in a tuple or not
 
 
-# Create a List 
-fruits_list = ['apple','banana','pineapple','orange','cherry']
+# Create a tuple 
+fruits_list = ('apple','banana','pineapple','orange','cherry')
 
 # Checking membership
 if 'cherry' in fruits_list:
