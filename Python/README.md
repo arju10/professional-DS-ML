@@ -38,16 +38,11 @@ Key Features of Dictionary:
 - Can't add duplicate element
 - Can't Modify/Update set
 
-## 3. Tuples
+## 4. Tuples
 A tuple is a collection of  items,similar to list , but immutable (can't be changed) , created using parentheses ().
-- Sets are unordered, meaning that their element do not have a specific order
-- Sets do not allow duplicate elements.
 
-Key Features of Dictionary:
+Key Features of Tuple:
 - 
 - Accessing values
-- Insert/Add new values 
-- Remove/Delete element
-- Retrive unique element
-- Union Set available
-- Can't add duplicate element
+- Can't Insert/Add new values directly but can Insert/Add after concating with other tupple
+- Can't Remove/Delete element directly
