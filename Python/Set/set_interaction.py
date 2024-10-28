@@ -10,5 +10,5 @@ your_set = {6,7,8, 3}
 # Performing intersection
 intersection_set = my_set.intersection(your_set)
 
-#print the union set
+#print the intersection set
 print('intersection of Set: ', intersection_set)
