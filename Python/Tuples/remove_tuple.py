@@ -1,6 +1,6 @@
 '''
 -  Tuple are immutable so element can't be deleted directly
-- For remove a element , you have to convert the tuple in list , and then back to a tuple
+- For remove a element , you have to convert the tuple in list ,remove it and then back to a tuple
 
 '''
 
