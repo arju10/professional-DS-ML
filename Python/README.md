@@ -28,7 +28,7 @@ A set is a collection of unique elements, created using curly braces {} or the s
 - Sets are unordered, meaning that their element do not have a specific order
 - Sets do not allow duplicate elements.
 
-Key Features of List:
+Key Features of Set:
 - 
 - Accessing values
 - Insert/Add new values 
