@@ -14,7 +14,7 @@ Key Features of Dictionary:
 ## 2. List
 A list is a collection of items in python, created using square brackets [] . List can contain different data types, including numbers, strings and other lists
 
-Key Features of Dictionary:
+Key Features of List:
 - 
 - Accessing values
 - Insert/Add new values
@@ -28,7 +28,7 @@ A set is a collection of unique elements, created using curly braces {} or the s
 - Sets are unordered, meaning that their element do not have a specific order
 - Sets do not allow duplicate elements.
 
-Key Features of Dictionary:
+Key Features of List:
 - 
 - Accessing values
 - Insert/Add new values 
