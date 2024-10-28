@@ -34,5 +34,6 @@ Key Features of Dictionary:
 - Insert/Add new values 
 - Modify/Update list
 - Remove/Delete element
-- Retrive list element
+- Retrive unique element
+- Union Set available
 - Can't add duplicate element
