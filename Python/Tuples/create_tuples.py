@@ -1,4 +1,4 @@
-# Create set 
+# Create tuple 
 my_tuple = (1,2,3,'Hello', 4, (10,20))
 
 #print the created tuple
