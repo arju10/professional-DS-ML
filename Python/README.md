@@ -21,3 +21,16 @@ Key Features of Dictionary:
 - Modify/Update list
 - Remove/Delete element
 - Retrive list element
+
+
+## 3. Set
+A set is a collection of unique elements, created using curly braces {} or the set() function.
+Sets are unordered, meaning that their element do not have a specific order
+
+Key Features of Dictionary:
+- 
+- Accessing values
+- Insert/Add new values
+- Modify/Update list
+- Remove/Delete element
+- Retrive list element
