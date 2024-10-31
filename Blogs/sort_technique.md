@@ -1,3 +1,8 @@
+## Additional Resources
+You can also read from here:  
+[Python Program: How to Sort a List of Numbers](https://dev.to/arju10/python-program-how-to-sort-a-list-of-numbers-2i0o)
+
+
 ## List:
  
 A list is a collection of items in python, created using square brackets [] . List can contain different data types, including numbers, strings and other lists. List is mutable ( It can't changed/modified).
