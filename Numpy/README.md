@@ -128,3 +128,24 @@ print("Elements greater than 20 : ",greater_than_20)
 **Output** </br>
 Elements greater than 20 :  [30 40 60 80]
 </br>
+
+### Exponential & Logarithm Function
+```
+import numpy as np
+
+# Create an array
+array = np.array([10,20,30])
+
+# Exponential & Logarithm functions
+exp_array = np.exp(array)
+log_array = np.log(array)
+
+print("Exponential of Array: ",exp_array)
+print("Logarithm of Array: ",log_array)
+```
+
+**Output** </br>
+Exponential of Array:  [2.20264658e+04 4.85165195e+08 1.06864746e+13]
+</br>
+Logarithm of Array:  [2.30258509 2.99573227 3.40119738]
+</br>
