@@ -64,8 +64,31 @@ print("Array with range of numbers : ",array_range)
 Array with range of numbers : 
  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
 
-</br>
+ **5. transpose():** </br>
+ Example: 
+```
+import numpy as np
 
+# Create 2D array
+original_array = np.array([
+    [1,2],
+    [3,4]
+])
+
+# Transpose the array
+transposed_array = np.transpose(original_array)
+
+print("Original Array: \n", original_array)
+print("Transposed Array: \n", transposed_array)
+```
+**Output** 
+
+Original Array: </br>
+ [[1 2] </br>
+ [3 4]]</br>
+Transposed Array: </br>
+ [[1 3]</br>
+ [2 4]]
 </br>
 
 ### Arithmetic Operations
@@ -167,9 +190,7 @@ print("Tan of angles : ", angles)
 Sins of angles:  [0.0000000e+00 1.0000000e+00 1.2246468e-16] </br>
 Cos of angles :  [0.         1.57079633 3.14159265] </br>
 Tan of angles :  [0.         1.57079633 3.14159265] </br>
-
 </br>
-
 </br>
 
 ### Array Indexing `[row:column]`
