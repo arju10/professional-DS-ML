@@ -66,6 +66,41 @@ Array with range of numbers :
 
 </br>
 
+</br>
+
+### Arithmetic Operations
+**1. add():** It adds minimum two arrays. Both array size should be same. </br>
+**2. subtract():** It will minus from one array to another array & Both array size should be same.</br>
+**3. multiply():** It multiplys between minimum two arrays. Both array size should be same.</br>
+**4. divide():** It divides  an array with another array & Both array size should be same.</br>
+Examples:
+```
+import numpy as np
+
+# Create arrays
+array1 = np.array([10,20,30])
+array2 = np.array([40,50,60])
+
+# Arithmetic Operations
+added = np.add(array1, array2)
+subtracted = np.subtract(array1 , array2)
+multiplied = np.multiply(array1, array2)
+divided = np.divide(array1, array2)
+
+print("Added: ", added)
+print("Subtracted :", subtracted)
+print("Multiplied: ", multiplied)
+print("Divided: ", divided)
+```
+**Output** 
+
+Added:  [50 70 90] </br>
+Subtracted : [-30 -30 -30]  </br>
+Multiplied:  [ 400 1000 1800] </br>
+Divided:  [0.25 0.4  0.5 ] </br>
+
+
+
 ### Array Indexing `[row:column]`
 ```
 import numpy as np
