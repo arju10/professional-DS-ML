@@ -140,6 +140,38 @@ Squared Array : [ 4 36 16  9 49] </br>
 Square root of array : [1.41421356 2.44948974 2.         1.73205081 2.64575131] 
 </br> </br>
 
+### Trigometric Functions
+**1. sin():**  </br> </br>
+**2. cos():**  </br> </br>
+**3. tan():**  </br> </br>
+
+Example: 
+```
+import numpy as np
+
+# Create array
+angles = np.array([0, np.pi/2, np.pi])
+
+# Trigometric functions
+sin_array = np.sin(angles)
+cos_array = np.cos(angles)
+tan_arraY = np.tan(angles)
+
+
+print("Sins of angles: ", sin_array)
+print("Cos of angles : ", angles)
+print("Tan of angles : ", angles)
+```
+**Output** 
+
+Sins of angles:  [0.0000000e+00 1.0000000e+00 1.2246468e-16] </br>
+Cos of angles :  [0.         1.57079633 3.14159265] </br>
+Tan of angles :  [0.         1.57079633 3.14159265] </br>
+
+</br>
+
+</br>
+
 ### Array Indexing `[row:column]`
 ```
 import numpy as np
