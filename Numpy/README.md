@@ -69,10 +69,10 @@ Array with range of numbers :
 </br>
 
 ### Arithmetic Operations
-**1. add():** It adds minimum two arrays. Both array size should be same. </br>
-**2. subtract():** It will minus from one array to another array & Both array size should be same.</br>
-**3. multiply():** It multiplys between minimum two arrays. Both array size should be same.</br>
-**4. divide():** It divides  an array with another array & Both array size should be same.</br>
+**1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
+**2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
+**3. multiply():** It multiplys between minimum two arrays. Both array size should be same.</br> </br>
+**4. divide():** It divides  an array with another array & Both array size should be same.</br> </br>
 Examples:
 ```
 import numpy as np
@@ -99,7 +99,46 @@ Subtracted : [-30 -30 -30]  </br>
 Multiplied:  [ 400 1000 1800] </br>
 Divided:  [0.25 0.4  0.5 ] </br>
 
+**5. power():** A power is a number multiplied by itself a certain number of times, represented by an exponent. For example:
+ **10^2** means 10 multiplied by itself, which is \(10 X 10 = 100\). </br> </br>
+**6. sqrt():** A square root of a number is a value that, when multiplied by itself, gives the original number. It is represented by the square root symbol (√).
 
+For example:
+
+- √121 = 11
+
+In this case, 11 × 11 = 121, so the square root of 121 is 11.
+
+### Properties of Square Roots
+
+1. The square root of a positive number has both a positive and a negative solution (e.g., √25 = ±5), but typically, the positive root is used.
+2. The square root of 0 is 0.
+3. Negative numbers do not have real square roots (they result in imaginary numbers).
+
+Examples :
+
+- √144 = 12
+- √64 = 8
+- √49 = 7
+
+```
+import numpy as np
+
+# Create array
+array = np.array([2,6,4,3,7])
+
+# Power & Square Root
+squared = np.power(array, 2)
+sqrt = np.sqrt(array)
+
+print("Squared Array :", squared)
+print("Square root of array :", sqrt)
+```
+**Output** 
+
+Squared Array : [ 4 36 16  9 49] </br>
+Square root of array : [1.41421356 2.44948974 2.         1.73205081 2.64575131] 
+</br> </br>
 
 ### Array Indexing `[row:column]`
 ```
