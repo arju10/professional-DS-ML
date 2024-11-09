@@ -193,6 +193,51 @@ Tan of angles :  [0.         1.57079633 3.14159265] </br>
 </br>
 </br>
 
+### Exponential & Logarithm Function
+**1. exp():**  </br> </br>
+**2. log():**  </br> </br>
+Example: 
+```
+import numpy as np
+
+# Create an array
+array = np.array([10,20,30])
+
+# Exponential & Logarithm functions
+exp_array = np.exp(array)
+log_array = np.log(array)
+
+print("Exponential of Array: ",exp_array)
+print("Logarithm of Array: ",log_array)
+```
+
+**Output** </br>
+Exponential of Array:  [2.20264658e+04 4.85165195e+08 1.06864746e+13]
+</br>
+Logarithm of Array:  [2.30258509 2.99573227 3.40119738]
+</br>
+
+### Broadcasting
+Adding a scaler to an array
+```
+import numpy as np
+
+# create array
+array = np.array(
+    [1,2,3]
+)
+
+# Braodcasting: Adding a scaler to an array
+result = array + 10
+
+print("Original Array: ", array)
+print("Array after broadcasting : ", result)
+```
+**Output** </br>
+Original Array:  [1 2 3] </br>
+Array after broadcasting :  [11 12 13]
+</br>
+
 ### Array Indexing `[row:column]`
 ```
 import numpy as np
@@ -255,24 +300,4 @@ print("Elements greater than 20 : ",greater_than_20)
 **Output** </br>
 Elements greater than 20 :  [30 40 60 80]
 </br>
-
-### Exponential & Logarithm Function
-```
-import numpy as np
-
-# Create an array
-array = np.array([10,20,30])
-
-# Exponential & Logarithm functions
-exp_array = np.exp(array)
-log_array = np.log(array)
-
-print("Exponential of Array: ",exp_array)
-print("Logarithm of Array: ",log_array)
-```
-
-**Output** </br>
-Exponential of Array:  [2.20264658e+04 4.85165195e+08 1.06864746e+13]
-</br>
-Logarithm of Array:  [2.30258509 2.99573227 3.40119738]
 </br>
