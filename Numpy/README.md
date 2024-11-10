@@ -502,7 +502,7 @@ Sorted Arrays:  [ 2  3  4  5  7  8 10]
 </br>
 
 
-### Array Indexing `[row:column]`
+### Array Indexing & Slicing: `[row:column]` 
 ####  Basic Indexing and Slicing
 
 ```python
@@ -568,10 +568,14 @@ rows = np.array([0,1,2])
 cols = np.array([2,1,0])
 indexed_elements = array_2d[rows, cols]
 
+# Multi Dimensional Slicing
+sub_array = array_2d[1:, 1:3]
+
 print("Element at (1,2) : ", element)
 print("First Row : ", row_slice)
 print("Second Column: ", column_slice)
 print("Indexed Elements : ", indexed_elements)
+print("Sub Array (Slicing Rows & Columns) : \n", sub_array)
 ```
 
 **Output** </br>
@@ -582,6 +586,9 @@ print("Indexed Elements : ", indexed_elements)
 `Second Column:  [2 5 8]`
 </br>
 `Indexed Elements :  [3 5 7]` </br>
+`Sub Array (Slicing Rows & Columns) :`</br>
+ [[5 6] </br>
+ [8 9]]
 
 
 #### 3D Array Indexing & Slicing
@@ -619,7 +626,7 @@ print("Sliced 3D Array : \n", slice_3D)
 </br>
 </br>
 
-### Boolean Indexing
+#### Boolean Indexing
 ```python
 import numpy as np
 
@@ -638,7 +645,7 @@ print("Elements greater than 20 : ",greater_than_20)
 </br>
 </br>
 
-### Conditional Indexing
+#### Conditional Indexing
 ```python
 import numpy as np
 
