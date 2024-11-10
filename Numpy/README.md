@@ -540,6 +540,8 @@ step_slice = array[::2] # Every Second Element
 #Modifying values specific indices
 array[[1,3]] = [100, 200]
 
+# Reversing the array using slicing
+reversed_array = array[::-1]
 
 print("First Element: ", first_element)
 print("Last Element: ", last_element)
@@ -548,6 +550,7 @@ print("Sliced Element: ", slice_array)
 print("Selected Elements :", selected_elements)
 print("Sliced Array with Step 2 :", step_slice)
 print("Modified Array : ",array)
+print("Reversed Array: ", reversed_array)
 ```
 
 **Output** </br>
@@ -559,6 +562,7 @@ print("Modified Array : ",array)
 `Selected Elements : [2 5]` </br>
 `Sliced Array with Step 2 : [1 4]` </br>
 `Modified Array :  [  1 100   4 200]`</br>
+`Reversed Array:  [5 4 2 1]`
 </br>
 
 #### 2D Array indexing & Slicing
