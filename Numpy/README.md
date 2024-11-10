@@ -524,12 +524,16 @@ selected_elements = array[[1,3]]
 # Slicing with a step
 step_slice = array[::2] # Every Second Element
 
+#Modifying values specific indices
+array[[1,3]] = [100, 200]
+
 
 print("First Element: ", first_element)
 print("Last Element: ", last_element)
 print("Sliced Element: ", slice_array)
 print("Selected Elements :", selected_elements)
 print("Sliced Array with Step 2 :", step_slice)
+print("Modified Array : ",array)
 ```
 
 **Output** </br>
@@ -539,6 +543,7 @@ print("Sliced Array with Step 2 :", step_slice)
 `Sliced Element:  [2 4 5] `</br>
 `Selected Elements : [2 5]` </br>
 `Sliced Array with Step 2 : [1 4]` </br>
+`Modified Array :  [  1 100   4 200]`</br>
 </br>
 
 #### 2D Array indexing & Slicing
