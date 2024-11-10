@@ -800,15 +800,20 @@ array = np.array([1,-2,3,-4,5])
 
 # Creating a Mask for positive values
 mask = array > 0
-
 # Applyinh mask to get only positive values
 positive_values = array[mask]
 
+# Masking elements where values are negative
+masked_array = np.ma.masked_where(array < 0, array)
+
+
 print("Positive Values : ", positive_values)
+print("Masked Array with negative values hidden: ", masked_array)
 ```
 **Output** </br>
 
-`Positive Values :  [1 3 5]`
+`Positive Values :  [1 3 5]` </br>
+`Masked Array with negative values hidden:  [1 -- 3 -- 5]`
 </br>
 </br>
 
