@@ -796,7 +796,7 @@ print("Positive Values : ", positive_values)
 import numpy as np
 
 # Create a square Matrix
-matrix = ([
+matrix = np.array([
     [1,2,3],
     [4,5,6],
     [7,8,9]
@@ -808,8 +808,12 @@ diagnoal_elements = np.diag(matrix)
 # Extracting the upper triangle (above the main diaginal)
 upper_triangle = np.triu(matrix)
 
+# Extracting the lower triangle (below the main diaginal)
+lower_triangle = np.tril(matrix)
+
 print("Diagnoal Elements: \n", diagnoal_elements)
 print("Upper Triangle of the Matrix: \n", upper_triangle)
+print("Lower Triangle of the Matrix: \n", lower_triangle)
 ```
 **Output** </br>
 
@@ -819,7 +823,11 @@ print("Upper Triangle of the Matrix: \n", upper_triangle)
  [0 5 6] </br>
  [0 0 9]] </br>
 </br>
-
+`Lower Triangle of the Matrix: `
+ [[1 0 0] </br>
+ [4 5 0] </br>
+ [7 8 9]] </br>
+ 
 #### Indexing using np.wehere()
 ```python
 import numpy as np
