@@ -787,7 +787,7 @@ print("Positive Values : ", positive_values)
 </br>
 </br>
 
-#### Extracting Diagnal Elements
+#### Matrix
 ```python
 import numpy as np
 
@@ -801,12 +801,19 @@ matrix = ([
 # Extracting the main diagnal
 diagnoal_elements = np.diag(matrix)
 
-print("Diagnoal Elements: ", diagnoal_elements)
+# Extracting the upper triangle (above the main diaginal)
+upper_triangle = np.triu(matrix)
+
+print("Diagnoal Elements: \n", diagnoal_elements)
+print("Upper Triangle of the Matrix: \n", upper_triangle)
 ```
 **Output** </br>
 
-`Diagnoal Elements:  [1 5 9]`
-</br>
+`Diagnoal Elements:  [1 5 9]` </br>
+`Upper Triangle of the Matrix:` </br>
+ [[1 2 3] </br>
+ [0 5 6] </br>
+ [0 0 9]] </br>
 </br>
 
 #### Indexing using np.wehere()
