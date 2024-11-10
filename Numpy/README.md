@@ -954,3 +954,26 @@ print("Indices for Meshgrid Advanced Indexing: \n", indices)
 `Indices for Meshgrid Advanced Indexing: ` </br>
  [[1 2 3 1 2 3 1 2 3] </br>
  [4 4 4 5 5 5 6 6 6]] </br>
+
+ #### Multiple condition using  `np.choose()` ** </br>
+
+ Example: 
+
+```python
+import numpy as np
+
+# Create an array
+array = np.array([1, 2, 4, 5])
+
+# Extend choices to include placeholder arrays for out-of-bounds indices
+choices = [array * 2, array + 10, array ** 2, array * 0, array * 0, array * 0]
+
+# Use np.choose with the modified choices array
+result = np.choose(array, choices)
+
+print("Result using np.choose:", result)
+
+```
+**Output** 
+
+`Result using np.choose: [11  4  0  0]`
