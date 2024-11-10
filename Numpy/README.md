@@ -767,3 +767,25 @@ print("Positive Values : ", positive_values)
 `Positive Values :  [1 3 5]`
 </br>
 </br>
+
+#### Extracting Diagnal Elements
+```python
+import numpy as np
+
+# Create a square Matrix
+matrix = ([
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+])
+
+# Extracting the main diagnal
+diagnoal_elements = np.diag(matrix)
+
+print("Diagnoal Elements: ", diagnoal_elements)
+```
+**Output** </br>
+
+`Diagnoal Elements:  [1 5 9]`
+</br>
+</br>
