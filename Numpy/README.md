@@ -521,16 +521,22 @@ slice_array = array[1:4]
 # Selecting Specific indices
 selected_elements = array[[1,3]]
 
+# Slicing with a step
+step_slice = array[::2] # Every Second Element
+
+
 print("First Element: ", first_element)
 print("Last Element: ", last_element)
 print("Sliced Element: ", slice_array)
 print("Selected Elements :", selected_elements)
+print("Sliced Array with Step 2 :", step_slice)
 ```
 **Output** </br>
 `First Element:  1` </br>
 `Last Element:  5` </br>
 `Sliced Element:  [2 4 5] `</br>
-`Selected Elements : [2 5]`
+`Selected Elements : [2 5]` </br>
+`Sliced Array with Step 2 : [1 4]` </br>
 </br>
 
 ```python
