@@ -513,7 +513,10 @@ array = np.array([1,2,4,5])
 
 # Aceesing element by index
 first_element = array[0]
+
+# Aceesing element from the end uing negative inidices
 last_element = array[-1]
+second_last_element = array[-2]
 
 # Slicing the array
 slice_array = array[1:4]
@@ -530,6 +533,7 @@ array[[1,3]] = [100, 200]
 
 print("First Element: ", first_element)
 print("Last Element: ", last_element)
+print("Second Last Element: ", second_last_element)
 print("Sliced Element: ", slice_array)
 print("Selected Elements :", selected_elements)
 print("Sliced Array with Step 2 :", step_slice)
@@ -540,6 +544,7 @@ print("Modified Array : ",array)
 
 `First Element:  1` </br>
 `Last Element:  5` </br>
+`Second Last Element:  4` </br>
 `Sliced Element:  [2 4 5] `</br>
 `Selected Elements : [2 5]` </br>
 `Sliced Array with Step 2 : [1 4]` </br>
