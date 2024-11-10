@@ -531,7 +531,9 @@ print("Sliced Element: ", slice_array)
 print("Selected Elements :", selected_elements)
 print("Sliced Array with Step 2 :", step_slice)
 ```
+
 **Output** </br>
+
 `First Element:  1` </br>
 `Last Element:  5` </br>
 `Sliced Element:  [2 4 5] `</br>
@@ -539,6 +541,7 @@ print("Sliced Array with Step 2 :", step_slice)
 `Sliced Array with Step 2 : [1 4]` </br>
 </br>
 
+#### 2D Array indexing
 ```python
 import numpy as np
 
@@ -550,38 +553,35 @@ array_2d = np.array(
         [7,8,9]
     ]
 )
-```
 
-**1. Accessing Individual elements:** 
-```python
 # Accessing individual elements
 element = array_2d[1,2] # Accessing element at row 1, column 2
 
-print("Element at (1,2) : ", element)
-```
-**Output** </br>
-Element at (1,2) :  `6`
-</br>
-
-**2. Slicing Row:** 
-```python
+# Slicing Row
 row_slice = array_2d[0, : ] # First row
+
+# Slicing Column
+column_slice = array_2d[:, 1] # Second Column
+
+# Using arrays for indexing
+rows = np.array([0,1,2]) 
+cols = np.array([2,1,0])
+indexed_elements = array_2d[rows, cols]
+
+print("Element at (1,2) : ", element)
 print("First Row : ", row_slice)
+print("Second Column: ", column_slice)
+print("Indexed Elements : ", indexed_elements)
 ```
 
 **Output** </br>
+`Element at (1,2) :`  `6`
+</br>
 `First Row :  [1 2 3]`
 </br>
-
-**3. Slicing Column:** 
-```python
-column_slice = array_2d[:, 1] # Second Column
-print("Second Column: ", column_slice)
-```
-
-**Output** </br>
 `Second Column:  [2 5 8]`
 </br>
+`Indexed Elements :  [3 5 7]` </br>
 
 ### Boolean Indexing
 ```python
@@ -602,3 +602,37 @@ print("Elements greater than 20 : ",greater_than_20)
 </br>
 </br>
 
+#### 3D Array Indexing
+```python
+import numpy as np
+
+# Create a 3D array
+array_3d = np.array(
+    [
+        [
+            [10,20], [30,40]
+        ],
+        [
+            [50,60], [70,80]
+        ]
+    ]
+)
+
+# Accessing elements in a 3D Array
+element = array_3d[1,0,1] # Accessing element at [1, 0 , 1]
+
+# Slicing in 3D
+slice_3D = array_3d[:, 0, : ] # First row
+
+print("Element at (1,0,1): ", element)
+print("\n")
+print("Sliced 3D Array : \n", slice_3D)
+```
+
+**Output** </br>
+`Element at (1,0,1):  60` </br>
+`Sliced 3D Array :` </br>
+ [[10 20] </br>
+ [50 60]]
+</br>
+</br>
