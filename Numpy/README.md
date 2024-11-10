@@ -408,3 +408,29 @@ Standard deviation :  1.4142135623730951</br>
 Variance :  2.0
 </br>
 </br>
+
+### Unique Elements and Their Counts
+
+**1. unique():** It finds the unique elements from array. If pass the parameter`retuen_counts = True`, it will show the number of unique elements from an array. </br> </br>
+
+Example: 
+
+```python
+import numpy as np
+
+# Create an array
+array = np.array(
+    [14,1,54,5,125,214,1,2,43,4,2,2,41,14,54,214,1]
+)
+
+# Finding Unique Element and their counts
+unique_element , counts= np.unique(array, return_counts=True)
+
+print("Unique Elements : ", unique_element)
+print("Counts of Unique Elements: ", counts)
+```
+**Output** </br>
+Unique Elements :  `[  1   2   4   5  14  41  43  54 125 214]` </br>
+Counts of Unique Elements:  `[3 3 1 1 2 1 1 2 1 2]`
+</br>
+</br>
