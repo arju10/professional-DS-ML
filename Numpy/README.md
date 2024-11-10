@@ -84,9 +84,9 @@ Randmon Array : </br>
 
 
 Normal Array : </br>
- [[-0.57461744 -0.09078458 -0.50067585]</br>
- [ 0.86439072 -1.44615505  0.25666949]</br>
- [ 0.01952512 -1.70556208 -0.80816368]]</br>
+ `[[-0.57461744 -0.09078458 -0.50067585]`</br>
+ `[ 0.86439072 -1.44615505  0.25666949]`</br>
+ `[ 0.01952512 -1.70556208 -0.80816368]]`</br>
 
 
  **6. transpose():** </br>
@@ -197,6 +197,38 @@ print("Linear Space : ", linear_space)
 **Output** 
 
 `Linear Space :  [ 0.   2.5  5.   7.5 10. ]`
+</br>
+
+**11. meshgrid():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create arrays
+x = np.array([1,2,3])
+y = np.array([4,5,6])
+
+# Create a meshgrid
+x,y = np.meshgrid(x,y)
+
+print("Meshgrid X : \n",x)
+print("\n")
+print("Meshgrid Y : \n",y)
+
+
+```
+**Output** 
+
+`Meshgrid X :`  </br>
+ [[1 2 3] </br>
+ [1 2 3]</br>
+ [1 2 3]]</br>
+
+
+`Meshgrid Y : `</br>
+ [[4 4 4]</br>
+ [5 5 5]</br>
+ [6 6 6]]</br>
 </br>
 
 ### Arithmetic Operations
