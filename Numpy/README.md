@@ -251,6 +251,31 @@ print("Clipped Array",clipped_array)
 `Clipped Array [2 2 4 4]`
 </br>
 
+### Cumulative Sum and Product
+**13. cumsum():** </br>
+**14. cumprod():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create a array
+array = np.array([1,2,4,5])
+
+# Calculating cumulative sum and product
+cumulative_sum = np.cumsum(array)
+cumulative_product = np.cumsum(array)
+
+print("cumulative sum : ", cumulative_sum)
+print("cumulative product : ", cumulative_product)
+```
+
+**Output** 
+
+`cumulative sum :  [ 1  3  7 12] `</br>
+`cumulative product :  [ 1  3  7 12]`
+</br>
+
+
 ### Arithmetic Operations
 **1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
 **2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
