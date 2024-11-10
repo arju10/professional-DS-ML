@@ -47,7 +47,7 @@ print("Array with all elements as 7 : \n",array_full)
 ```
 **Output** 
 
-Array with all elements as 7 : </br> 
+`Array with all elements as 7 :` </br> 
  [[7 7] </br> 
  [7 7]]
 
@@ -277,10 +277,10 @@ print("Divided: ", divided)
 ```
 **Output** 
 
-Added:  [50 70 90] </br>
-Subtracted : [-30 -30 -30]  </br>
-Multiplied:  [ 400 1000 1800] </br>
-Divided:  [0.25 0.4  0.5 ] </br>
+`Added:  [50 70 90]` </br>
+`Subtracted : [-30 -30 -30]`  </br>
+`Multiplied:  [ 400 1000 1800]` </br>
+`Divided:  [0.25 0.4  0.5 ]` </br>
 
 **5. power():** A power is a number multiplied by itself a certain number of times, represented by an exponent. For example:
  **10^2** means 10 multiplied by itself, which is \(10 X 10 = 100\). </br> </br>
@@ -329,6 +329,7 @@ Square root of array : `[1.41421356` `2.44948974` `2.`         `1.73205081 2.645
 **3. tan():**  </br> </br>
 
 Example: 
+
 ```python
 import numpy as np
 
@@ -340,11 +341,11 @@ sin_array = np.sin(angles)
 cos_array = np.cos(angles)
 tan_arraY = np.tan(angles)
 
-
 print("Sins of angles: ", sin_array)
 print("Cos of angles : ", angles)
 print("Tan of angles : ", angles)
 ```
+
 **Output** 
 
 Sins of angles:  `[0.0000000e+00 1.0000000e+00 1.2246468e-16]` </br>
@@ -356,7 +357,9 @@ Tan of angles : ` [0.         1.57079633 3.14159265]` </br>
 ### Exponential & Logarithm Function
 **1. exp():**  </br> </br>
 **2. log():**  </br> </br>
-Example: 
+
+Example:
+
 ```python
 import numpy as np
 
@@ -372,8 +375,10 @@ print("Logarithm of Array: ",log_array)
 ```
 
 **Output** </br>
+
 Exponential of Array:  `[2.20264658e+04 4.85165195e+08 1.06864746e+13]`
 </br>
+
 Logarithm of Array:  `[2.30258509 2.99573227 3.40119738]`
 </br>
 
@@ -439,7 +444,9 @@ Counts of Unique Elements:  `[3 3 1 1 2 1 1 2 1 2]`
 ### Cumulative Sum and Product
 **1. cumsum():** </br>
 **2. cumprod():** </br>
+
  Example: 
+
 ```python
 import numpy as np
 
@@ -462,7 +469,9 @@ print("cumulative product : ", cumulative_product)
 
 ### Broadcasting
 Adding a scaler to an array.</br>
+
 Example:
+
 ```python
 import numpy as np
 
@@ -484,6 +493,7 @@ print("Array after broadcasting : ", result)
 
 ### Sorting Array `sort()`
 **1. sort():** It sorts the array by default ascending order.
+
 ```python
 import numpy as np
 
@@ -498,7 +508,7 @@ sorted_array = np.sort(array,)
 print("Sorted Arrays: ", sorted_array)
 ```
 **Output** </br>
-Sorted Arrays:  [ 2  3  4  5  7  8 10]
+Sorted Arrays:  `[ 2  3  4  5  7  8 10]`
 </br>
 
 
@@ -584,12 +594,16 @@ sub_array = array_2d[1:, 1:3]
 # Selecting specific rows and columns using slices
 selected_slice = array_2d[1:, :2]
 
+# Slicing every second element in rows and columns [Advance Slicing with Step]
+step_sliced_element = array_2d[::2, ::2]
+
 print("Element at (1,2) : ", element)
 print("First Row : ", row_slice)
 print("Second Column: ", column_slice)
 print("Indexed Elements : ", indexed_elements)
 print("Sub Array (Slicing Rows & Columns) : \n", sub_array)
 print("Selected Slice : \n", selected_slice)
+print("Advanced sliced array with step \n", step_sliced_element)
 ```
 
 **Output** </br>
@@ -611,6 +625,11 @@ print("Selected Slice : \n", selected_slice)
  [[4 5]</br>
  [7 8]]
 
+`Advanced sliced array with step ` </br>
+ [[1 3] </br>
+ [7 9]]
+
+ </br>
 
 #### 3D Array Indexing & Slicing
 ```python
