@@ -728,10 +728,17 @@ array = np.array(
 # Boolean Indexing
 greater_than_20 = array[array > 20]
 
+# Boolean Indexing
+even_numbers = array[array %2==0]
+
+print("Original : ", array)
 print("Elements greater than 20 : ",greater_than_20)
+print("Even Numbers : ",even_numbers)
 ```
 **Output** </br>
-`Elements greater than 20 :  [30 40 60 80]`
+`Original :  [10 20 30 40 60 80]` </br>
+`Elements greater than 20 :  [30 40 60 80]` </br>
+`Elements greater than 20 :  [10 20 30 40 60 80]` </br>
 </br>
 </br>
 
