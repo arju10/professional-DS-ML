@@ -670,6 +670,27 @@ print("Sliced 3D Array : \n", slice_3D)
 </br>
 </br>
 
+### Multi Dimensional Array indexing with mixed types
+```python
+import numpy as np
+
+# Create 3D Array
+array_3D = np.array([
+        [[1,2], [3,4]], [[5,6], [7,8]], [[9,10], [11,12]]
+]
+)
+
+# Mixing slicing with direct indexing
+mixed_index = array_3D[1:, 0, 1]
+
+print("Mixed type indexing result: ", mixed_index)
+```
+**Output** </br>
+`Mixed type indexing result:  [ 6 10]`
+</br>
+</br>
+
+
 #### Boolean Indexing
 ```python
 import numpy as np
@@ -827,7 +848,7 @@ print("Lower Triangle of the Matrix: \n", lower_triangle)
  [[1 0 0] </br>
  [4 5 0] </br>
  [7 8 9]] </br>
- 
+
 #### Indexing using np.wehere()
 ```python
 import numpy as np
