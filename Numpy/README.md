@@ -880,7 +880,7 @@ print("Lower Triangle of the Matrix: \n", lower_triangle)
  [4 5 0] </br>
  [7 8 9]] </br>
 
-#### Indexing using np.wehere()
+#### Indexing using `np.wehere()`
 ```python
 import numpy as np
 
@@ -892,17 +892,23 @@ array = np.array(
 # Using np.where to find indices where elements are greater than 25
 indices = np.where(array > 25)
 
+# Replacing values based on condition where elements are greater than 25
+result = np.where(array > 25, 0, array)
+
+
 print("Indices where elements > 25 : ",indices)
 print("Values where elements > 25: ",array[indices])
+print("Array with Values where elements > 25 replaced with 0: ",result)
 ```
 **Output** </br>
 
 `Indices where elements > 25 :  (array([2, 3, 4, 5]),)` </br>
-`Values where elements > 25:  [30 40 60 80]`
+`Values where elements > 25:  [30 40 60 80]` </br>
+`Array with Values where elements > 25 replaced with 0:  [10 20  0  0  0  0]`
 </br>
 </br>
 
-#### Indexing using np.take()
+#### Indexing using `np.take()`
 ```python
 import numpy as np
 
@@ -922,3 +928,29 @@ print("Selected Elements using np.take", result)
 `Selected Elements using np.take [10 30 60]`
 </br>
 </br>
+
+#### Indexing using advanced `meshgrid()` ** </br>
+
+ Example: 
+
+```python
+import numpy as np
+
+# Create arrays
+x = np.array([1,2,3])
+y = np.array([4,5,6])
+
+# Create a meshgrid
+x,y = np.meshgrid(x,y)
+
+indices = np.vstack(
+    [x.ravel(), y.ravel()]
+)
+
+print("Indices for Meshgrid Advanced Indexing: \n", indices)
+```
+**Output** 
+
+`Indices for Meshgrid Advanced Indexing: ` </br>
+ [[1 2 3 1 2 3 1 2 3] </br>
+ [4 4 4 5 5 5 6 6 6]] </br>
