@@ -789,3 +789,25 @@ print("Diagnoal Elements: ", diagnoal_elements)
 `Diagnoal Elements:  [1 5 9]`
 </br>
 </br>
+
+#### Indexing using np.wehere()
+```python
+import numpy as np
+
+# Create a array
+array = np.array(
+    [10,20,30,40,60,80]
+)
+
+# Using np.where to find indices where elements are greater than 25
+indices = np.where(array > 25)
+
+print("Indices where elements > 25 : ",indices)
+print("Values where elements > 25: ",array[indices])
+```
+**Output** </br>
+
+`Indices where elements > 25 :  (array([2, 3, 4, 5]),)` </br>
+`Values where elements > 25:  [30 40 60 80]`
+</br>
+</br>
