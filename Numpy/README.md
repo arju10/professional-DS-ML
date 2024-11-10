@@ -64,7 +64,7 @@ print("Array with range of numbers : ",array_range)
 Array with range of numbers : 
  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
 
- **6. random():** </br>
+ **5. random():** </br>
  Example: 
 ```python
 import numpy as np
@@ -91,7 +91,7 @@ Normal Array : </br>
  [ 0.01952512 -1.70556208 -0.80816368]]</br>
 
 
- **5. transpose():** </br>
+ **6. transpose():** </br>
  Example: 
 ```python
 import numpy as np
@@ -118,6 +118,31 @@ Transposed Array: </br>
  [2 4]]
 </br>
 
+**7. reshape():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create array
+original_array = np.array(
+    [1,4,6,7,8,9]
+)
+
+# Reshaping to different dimensions
+reshaped_array = original_array.reshape((2,3))
+
+print("Original Array : \n", original_array)
+print("\n")
+print("Reshaping Array : \n", reshaped_array)
+```
+**Output** 
+
+Original Array : </br>
+ [1 4 6 7 8 9]</br></br>
+Reshaping Array : </br>
+ [[1 4 6]</br>
+ [7 8 9]]
+</br>
 ### Arithmetic Operations
 **1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
 **2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
