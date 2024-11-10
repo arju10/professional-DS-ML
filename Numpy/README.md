@@ -251,6 +251,31 @@ print("Clipped Array",clipped_array)
 `Clipped Array [2 2 4 4]`
 </br>
 
+**13. flatten():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create a 2D array
+array_2d = np.array(
+    [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ]
+)
+
+# Flattening the array
+flattened_array = array_2d.flatten()
+
+print("Flattened Array : ",flattened_array)
+```
+**Output** 
+
+`Flattened Array :  [1 2 3 4 5 6 7 8 9]` </br>
+
+</br>
+
 ### Arithmetic Operations
 **1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
 **2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
@@ -791,7 +816,7 @@ print("Result using Ellipsis (...): \n", result)
 </br>
 </br>
 
-#### Mask Indexing
+#### Mask Indexing `np.ma`
 ```python
 import numpy as np
 
@@ -818,10 +843,11 @@ print("Masked Array with negative values hidden: ", masked_array)
 </br>
 
 #### Matrix
+#### Indexing using `np.diag()` `np.triu()` `np.tril`
 ```python
 import numpy as np
 
-# Create a square Matrix
+# Create a square Matrix 
 matrix = np.array([
     [1,2,3],
     [4,5,6],
