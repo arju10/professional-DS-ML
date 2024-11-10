@@ -374,3 +374,37 @@ print("Elements greater than 20 : ",greater_than_20)
 Elements greater than 20 :  [30 40 60 80]
 </br>
 </br>
+
+### Statistical Functions
+
+**1. mean():**  </br> </br>
+**2. median():**  </br> </br>
+**3. std():**  </br> </br>
+**4. var():**  </br> </br>
+
+```python
+import numpy as np
+
+# Create array
+array = np.array(
+    [1,2,3,4,5]
+)
+
+# Calculating statistical functions
+mean = np.mean(array)
+median = np.median(array)
+std_dev = np.std(array)
+variance = np.var(array)
+
+print("Mean  : ", mean)
+print("Median : ", median)
+print("Standard deviation : ", std_dev)
+print("Variance : ", variance)
+```
+**Output** </br>
+Mean  :  3.0</br>
+Median :  3.0</br>
+Standard deviation :  1.4142135623730951</br>
+Variance :  2.0
+</br>
+</br>
