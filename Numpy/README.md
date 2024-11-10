@@ -251,31 +251,6 @@ print("Clipped Array",clipped_array)
 `Clipped Array [2 2 4 4]`
 </br>
 
-### Cumulative Sum and Product
-**13. cumsum():** </br>
-**14. cumprod():** </br>
- Example: 
-```python
-import numpy as np
-
-# Create a array
-array = np.array([1,2,4,5])
-
-# Calculating cumulative sum and product
-cumulative_sum = np.cumsum(array)
-cumulative_product = np.cumsum(array)
-
-print("cumulative sum : ", cumulative_sum)
-print("cumulative product : ", cumulative_product)
-```
-
-**Output** 
-
-`cumulative sum :  [ 1  3  7 12] `</br>
-`cumulative product :  [ 1  3  7 12]`
-</br>
-
-
 ### Arithmetic Operations
 **1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
 **2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
@@ -402,6 +377,89 @@ Exponential of Array:  `[2.20264658e+04 4.85165195e+08 1.06864746e+13]`
 Logarithm of Array:  `[2.30258509 2.99573227 3.40119738]`
 </br>
 
+### Statistical Functions
+
+**1. mean():**  </br> </br>
+**2. median():**  </br> </br>
+**3. std():**  </br> </br>
+**4. var():**  </br> </br>
+
+```python
+import numpy as np
+
+# Create array
+array = np.array(
+    [1,2,3,4,5]
+)
+
+# Calculating statistical functions
+mean = np.mean(array)
+median = np.median(array)
+std_dev = np.std(array)
+variance = np.var(array)
+
+print("Mean  : ", mean)
+print("Median : ", median)
+print("Standard deviation : ", std_dev)
+print("Variance : ", variance)
+```
+**Output** </br>
+Mean  :  `3.0`</br>
+Median :  `3.0`</br>
+Standard deviation :  `1.4142135623730951`</br>
+Variance :  `2.0`
+</br>
+</br>
+
+### Unique Elements and Their Counts
+
+**1. unique():** It finds the unique elements from array. If pass the parameter`retuen_counts = True`, it will show the number of unique elements from an array. </br> </br>
+
+Example: 
+
+```python
+import numpy as np
+
+# Create an array
+array = np.array(
+    [14,1,54,5,125,214,1,2,43,4,2,2,41,14,54,214,1]
+)
+
+# Finding Unique Element and their counts
+unique_element , counts= np.unique(array, return_counts=True)
+
+print("Unique Elements : ", unique_element)
+print("Counts of Unique Elements: ", counts)
+```
+**Output** </br>
+Unique Elements :  `[  1   2   4   5  14  41  43  54 125 214]` </br>
+Counts of Unique Elements:  `[3 3 1 1 2 1 1 2 1 2]`
+</br>
+
+### Cumulative Sum and Product
+**1. cumsum():** </br>
+**2. cumprod():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create a array
+array = np.array([1,2,4,5])
+
+# Calculating cumulative sum and product
+cumulative_sum = np.cumsum(array)
+cumulative_product = np.cumsum(array)
+
+print("cumulative sum : ", cumulative_sum)
+print("cumulative product : ", cumulative_product)
+```
+
+**Output** 
+
+`cumulative sum :  [ 1  3  7 12] `</br>
+`cumulative product :  [ 1  3  7 12]`
+</br>
+
 ### Broadcasting
 Adding a scaler to an array.</br>
 Example:
@@ -445,6 +503,31 @@ Sorted Arrays:  [ 2  3  4  5  7  8 10]
 
 
 ### Array Indexing `[row:column]`
+####  Basic Indexing and Slicing
+
+```
+import numpy as np
+
+# Create a array
+array = np.array([1,2,4,5])
+
+# Aceesing element by index
+first_element = array[0]
+last_element = array[-1]
+
+# Slicing the array
+slice_array = array[1:4]
+
+print("First Element: ", first_element)
+print("Last Element: ", last_element)
+print("Sliced Element: ", slice_array)
+```
+**Output** </br>
+`First Element:  1` </br>
+`Last Element:  5` </br>
+`Sliced Element:  [2 4 5] `</br>
+</br>
+
 ```python
 import numpy as np
 
@@ -508,62 +591,3 @@ print("Elements greater than 20 : ",greater_than_20)
 </br>
 </br>
 
-### Statistical Functions
-
-**1. mean():**  </br> </br>
-**2. median():**  </br> </br>
-**3. std():**  </br> </br>
-**4. var():**  </br> </br>
-
-```python
-import numpy as np
-
-# Create array
-array = np.array(
-    [1,2,3,4,5]
-)
-
-# Calculating statistical functions
-mean = np.mean(array)
-median = np.median(array)
-std_dev = np.std(array)
-variance = np.var(array)
-
-print("Mean  : ", mean)
-print("Median : ", median)
-print("Standard deviation : ", std_dev)
-print("Variance : ", variance)
-```
-**Output** </br>
-Mean  :  `3.0`</br>
-Median :  `3.0`</br>
-Standard deviation :  `1.4142135623730951`</br>
-Variance :  `2.0`
-</br>
-</br>
-
-### Unique Elements and Their Counts
-
-**1. unique():** It finds the unique elements from array. If pass the parameter`retuen_counts = True`, it will show the number of unique elements from an array. </br> </br>
-
-Example: 
-
-```python
-import numpy as np
-
-# Create an array
-array = np.array(
-    [14,1,54,5,125,214,1,2,43,4,2,2,41,14,54,214,1]
-)
-
-# Finding Unique Element and their counts
-unique_element , counts= np.unique(array, return_counts=True)
-
-print("Unique Elements : ", unique_element)
-print("Counts of Unique Elements: ", counts)
-```
-**Output** </br>
-Unique Elements :  `[  1   2   4   5  14  41  43  54 125 214]` </br>
-Counts of Unique Elements:  `[3 3 1 1 2 1 1 2 1 2]`
-</br>
-</br>
