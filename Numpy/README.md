@@ -231,6 +231,26 @@ print("Meshgrid Y : \n",y)
  [6 6 6]]</br>
 </br>
 
+**12. clip():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create a array
+array = np.array([1,2,4,5])
+
+# Clipping values to be between 2 and 4
+clipped_array = np.clip(array, 2,4)
+
+print("Original Array",array)
+print("Clipped Array",clipped_array)
+```
+**Output** 
+
+`Original Array [1 2 4 5]` </br>
+`Clipped Array [2 2 4 4]`
+</br>
+
 ### Arithmetic Operations
 **1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
 **2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
