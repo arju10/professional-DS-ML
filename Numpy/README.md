@@ -581,24 +581,35 @@ indexed_elements = array_2d[rows, cols]
 # Multi Dimensional Slicing
 sub_array = array_2d[1:, 1:3]
 
+# Selecting specific rows and columns using slices
+selected_slice = array_2d[1:, :2]
+
 print("Element at (1,2) : ", element)
 print("First Row : ", row_slice)
 print("Second Column: ", column_slice)
 print("Indexed Elements : ", indexed_elements)
 print("Sub Array (Slicing Rows & Columns) : \n", sub_array)
+print("Selected Slice : \n", selected_slice)
 ```
 
 **Output** </br>
 `Element at (1,2) :`  `6`
 </br>
+
 `First Row :  [1 2 3]`
 </br>
+
 `Second Column:  [2 5 8]`
 </br>
+
 `Indexed Elements :  [3 5 7]` </br>
 `Sub Array (Slicing Rows & Columns) :`</br>
  [[5 6] </br>
- [8 9]]
+ [8 9]] </br>
+ 
+ `Selected Slice : ` </br>
+ [[4 5]</br>
+ [7 8]]
 
 
 #### 3D Array Indexing & Slicing
