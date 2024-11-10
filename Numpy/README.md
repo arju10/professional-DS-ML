@@ -183,6 +183,22 @@ print("Spiting Array : ", split_arrays)
 `Spiting Array :  [array([1, 2]), array([34,  4]), array([5, 6])]`
 </br>
 
+**10. linspace():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Generating a linear space array with evenly spaced values
+linear_space = np.linspace(0,10,5)
+
+print("Linear Space : ", linear_space)
+
+```
+**Output** 
+
+`Linear Space :  [ 0.   2.5  5.   7.5 10. ]`
+</br>
+
 ### Arithmetic Operations
 **1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
 **2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
