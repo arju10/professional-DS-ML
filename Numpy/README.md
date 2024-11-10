@@ -655,6 +655,40 @@ print("Elements greater than 20 : ",greater_than_20)
 </br>
 </br>
 
+#### Fancy Indexing
+```python
+import numpy as np
+
+# Create a array
+array = np.array([1,2,4,5])
+
+# Selecting Specific indices
+selected_elements = array[[1,3]]
+
+print("Selected Elements :", selected_elements)
+```
+**Output** </br>
+`Selected Elements : [2 5]`
+</br>
+</br>
+
+#### Boolean condition combined with specific indices
+```python
+import numpy as np
+
+# Creating an array
+array = np.array([10, 15, 20, 25, 30])
+
+# Boolean condition combined with specific indices
+result = array[(array > 10) & (array < 30)][[0, 2]]
+
+print('Combined Boolean and Fancy Indexing Result:', result)
+```
+**Output** </br>
+
+`Combined Boolean and Fancy Indexing Result: [15 25]`
+</br>
+
 #### Conditional Indexing
 ```python
 import numpy as np
