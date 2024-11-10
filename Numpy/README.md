@@ -541,7 +541,7 @@ print("Sliced Array with Step 2 :", step_slice)
 `Sliced Array with Step 2 : [1 4]` </br>
 </br>
 
-#### 2D Array indexing
+#### 2D Array indexing & Slicing
 ```python
 import numpy as np
 
@@ -583,26 +583,8 @@ print("Indexed Elements : ", indexed_elements)
 </br>
 `Indexed Elements :  [3 5 7]` </br>
 
-### Boolean Indexing
-```python
-import numpy as np
 
-# Create a array
-array = np.array(
-    [10,20,30,40,60,80]
-)
-
-# Boolean Indexing
-greater_than_20 = array[array > 20]
-
-print("Elements greater than 20 : ",greater_than_20)
-```
-**Output** </br>
-`Elements greater than 20 :  [30 40 60 80]`
-</br>
-</br>
-
-#### 3D Array Indexing
+#### 3D Array Indexing & Slicing
 ```python
 import numpy as np
 
@@ -634,5 +616,43 @@ print("Sliced 3D Array : \n", slice_3D)
 `Sliced 3D Array :` </br>
  [[10 20] </br>
  [50 60]]
+</br>
+</br>
+
+### Boolean Indexing
+```python
+import numpy as np
+
+# Create a array
+array = np.array(
+    [10,20,30,40,60,80]
+)
+
+# Boolean Indexing
+greater_than_20 = array[array > 20]
+
+print("Elements greater than 20 : ",greater_than_20)
+```
+**Output** </br>
+`Elements greater than 20 :  [30 40 60 80]`
+</br>
+</br>
+
+### Conditional Indexing
+```python
+import numpy as np
+
+# Create a array
+array = np.array(
+    [1,2,3,4,5,6]
+)
+
+# Setting elements that satisfying a condition
+array[array % 2 == 0] = -1 # Set even numbers to -1
+
+print("Array after conditional indexing : ",array)
+```
+**Output** </br>
+`Array after conditional indexing :  [ 1 -1  3 -1  5 -1]`
 </br>
 </br>
