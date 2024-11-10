@@ -64,6 +64,33 @@ print("Array with range of numbers : ",array_range)
 Array with range of numbers : 
  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
 
+ **6. random():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create array
+random_array = np.random.rand(3,3) # Random values in 3 X 3
+normal_array = np.random.randn(3,3) # Random values with a normal distribution
+
+print("Randmon Array : \n", random_array)
+print("\n")
+print("Normal Array : \n", normal_array)
+```
+**Output** 
+
+Randmon Array : </br>
+ [[0.14635308 0.23362121 0.28310351]</br>
+ [0.23209788 0.67298124 0.84145588]</br>
+ [0.6829577  0.45439367 0.05747398]]</br>
+
+
+Normal Array : </br>
+ [[-0.57461744 -0.09078458 -0.50067585]</br>
+ [ 0.86439072 -1.44615505  0.25666949]</br>
+ [ 0.01952512 -1.70556208 -0.80816368]]</br>
+
+
  **5. transpose():** </br>
  Example: 
 ```python
