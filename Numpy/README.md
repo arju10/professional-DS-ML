@@ -9,8 +9,8 @@ Numpy is faster than list because numpy provides array object.
 
 ## Numpy Functions:
 `Note: ` To use numpy always import it.
-```
-import numpy as np // Here, numpy is imported as np
+```python
+import numpy as np # Here, numpy is imported as np
 ```
 </br>
 
@@ -18,7 +18,7 @@ import numpy as np // Here, numpy is imported as np
 
 
 **1. zeros():** It creates a array with zeros. Example: 
-```
+```python
 array_zeros = np.zeros((3,3))
 print("Array of Zeros: \n", array_zeros)
 ```
@@ -31,7 +31,7 @@ Array of Zeros: </br>
 
 
 **2. ones():** It creates a array with ones. Example: 
-```
+```python
 array_ones = np.ones((2,2))
 print("Array of ones: \n",array_ones)
 ```
@@ -43,7 +43,7 @@ Array of ones:  </br>
 
 
 **3. full():** It creates a array with all elements as 7. Example: 
-```
+```python
 array_full = np.full((2,2),7)
 print("Array with all elements as 7 : \n",array_full)
 ```
@@ -55,7 +55,7 @@ Array with all elements as 7 : </br>
 
 
 **4. range():** It creates a array between 0 to 20. Example: 
-```
+```python
 array_range = np.arange(20)
 print("Array with range of numbers : ",array_range)
 ```
@@ -66,7 +66,7 @@ Array with range of numbers :
 
  **5. transpose():** </br>
  Example: 
-```
+```python
 import numpy as np
 
 # Create 2D array
@@ -97,7 +97,7 @@ Transposed Array: </br>
 **3. multiply():** It multiplys between minimum two arrays. Both array size should be same.</br> </br>
 **4. divide():** It divides  an array with another array & Both array size should be same.</br> </br>
 Examples:
-```
+```python
 import numpy as np
 
 # Create arrays
@@ -144,7 +144,7 @@ Examples :
 - √64 = 8
 - √49 = 7
 
-```
+```python
 import numpy as np
 
 # Create array
@@ -169,7 +169,7 @@ Square root of array : [1.41421356 2.44948974 2.         1.73205081 2.64575131]
 **3. tan():**  </br> </br>
 
 Example: 
-```
+```python
 import numpy as np
 
 # Create array
@@ -197,7 +197,7 @@ Tan of angles :  [0.         1.57079633 3.14159265] </br>
 **1. exp():**  </br> </br>
 **2. log():**  </br> </br>
 Example: 
-```
+```python
 import numpy as np
 
 # Create an array
@@ -218,8 +218,9 @@ Logarithm of Array:  [2.30258509 2.99573227 3.40119738]
 </br>
 
 ### Broadcasting
-Adding a scaler to an array
-```
+Adding a scaler to an array.</br>
+Example:
+```python
 import numpy as np
 
 # create array
@@ -238,8 +239,28 @@ Original Array:  [1 2 3] </br>
 Array after broadcasting :  [11 12 13]
 </br>
 
-### Array Indexing `[row:column]`
+### Sorting Array `sort()`
+**1. sort():** It sorts the array by default ascending order.
+```python
+import numpy as np
+
+# Create array
+array = np.array(
+    [2,4,5,3,10,7,8]
+)
+
+# Sort the array
+sorted_array = np.sort(array,)
+
+print("Sorted Arrays: ", sorted_array)
 ```
+**Output** </br>
+Sorted Arrays:  [ 2  3  4  5  7  8 10]
+</br>
+
+
+### Array Indexing `[row:column]`
+```python
 import numpy as np
 
 # Create a 2D array
@@ -253,7 +274,7 @@ array_2d = np.array(
 ```
 
 **1. Accessing Individual elements:** 
-```
+```python
 # Accessing individual elements
 element = array_2d[1,2] # Accessing element at row 1, column 2
 
@@ -264,7 +285,7 @@ Element at (1,2) :  6
 </br>
 
 **2. Slicing Row:** 
-```
+```python
 row_slice = array_2d[0, : ] # First row
 print("First Row : ", row_slice)
 ```
@@ -274,7 +295,7 @@ First Row :  [1 2 3]
 </br>
 
 **3. Slicing Column:** 
-```
+```python
 column_slice = array_2d[:, 1] # Second Column
 print("Second Column: ", column_slice)
 ```
@@ -284,7 +305,7 @@ Second Column:  [2 5 8]
 </br>
 
 ### Boolean Indexing
-```
+```python
 import numpy as np
 
 # Create a array
