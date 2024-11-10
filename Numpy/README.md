@@ -25,9 +25,9 @@ print("Array of Zeros: \n", array_zeros)
 **Output** 
 
 Array of Zeros: </br>
- [[0. 0. 0.] </br>
- [0. 0. 0.] </br>
- [0. 0. 0.]] </br>
+ `[[0. 0. 0.]` </br>
+ `[0. 0. 0.]` </br>
+ `[0. 0. 0.]]` </br>
 
 
 **2. ones():** It creates a array with ones. Example: 
@@ -38,8 +38,8 @@ print("Array of ones: \n",array_ones)
 **Output** 
 
 Array of ones:  </br>
- [[1. 1.] </br>
- [1. 1.]] </br>
+ `[[1. 1.]` </br>
+ `[1. 1.]]` </br>
 
 
 **3. full():** It creates a array with all elements as 7. Example: 
@@ -62,7 +62,7 @@ print("Array with range of numbers : ",array_range)
 **Output** 
 
 Array with range of numbers : 
- [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
+ `[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]`
 
  **5. random():** </br>
  Example: 
@@ -80,9 +80,9 @@ print("Normal Array : \n", normal_array)
 **Output** 
 
 Randmon Array : </br>
- [[0.14635308 0.23362121 0.28310351]</br>
- [0.23209788 0.67298124 0.84145588]</br>
- [0.6829577  0.45439367 0.05747398]]</br>
+ `[[0.14635308 0.23362121 0.28310351]`</br>
+ `[0.23209788 0.67298124 0.84145588]`</br>
+ `[0.6829577  0.45439367 0.05747398]]`</br>
 
 
 Normal Array : </br>
@@ -111,11 +111,11 @@ print("Transposed Array: \n", transposed_array)
 **Output** 
 
 Original Array: </br>
- [[1 2] </br>
- [3 4]]</br>
+ `[[1 2]` </br>
+ `[3 4]]`</br>
 Transposed Array: </br>
- [[1 3]</br>
- [2 4]]
+` [[1 3]`</br>
+` [2 4]]`
 </br>
 
 **7. reshape():** </br>
@@ -138,11 +138,32 @@ print("Reshaping Array : \n", reshaped_array)
 **Output** 
 
 Original Array : </br>
- [1 4 6 7 8 9]</br></br>
+ `[1 4 6 7 8 9]`</br></br>
 Reshaping Array : </br>
- [[1 4 6]</br>
- [7 8 9]]
+ `[[1 4 6]` </br>
+ `[7 8 9]]`
 </br>
+
+**8. concatenate():** </br>
+ Example: 
+```python
+import numpy as np
+
+# Create an array
+array1 = np.array([1,2,3])
+array2 = np.array([4,5,6])
+
+# Concatenating arrays
+concatenating_array = np.concatenate((array1, array2))
+
+print("Concatenate Array : ", concatenating_array)
+```
+**Output** 
+
+`Concatenate Array :  [1 2 3 4 5 6]`
+</br>
+
+
 ### Arithmetic Operations
 **1. add():** It adds minimum two arrays. Both array size should be same. </br> </br>
 **2. subtract():** It will minus from one array to another array & Both array size should be same.</br> </br>
@@ -211,8 +232,8 @@ print("Square root of array :", sqrt)
 ```
 **Output** 
 
-Squared Array : [ 4 36 16  9 49] </br>
-Square root of array : [1.41421356 2.44948974 2.         1.73205081 2.64575131] 
+Squared Array :` [ 4 36 16  9 49]` </br>
+Square root of array : `[1.41421356` `2.44948974` `2.`         `1.73205081 2.64575131] `
 </br> </br>
 
 ### Trigometric Functions
@@ -239,9 +260,9 @@ print("Tan of angles : ", angles)
 ```
 **Output** 
 
-Sins of angles:  [0.0000000e+00 1.0000000e+00 1.2246468e-16] </br>
-Cos of angles :  [0.         1.57079633 3.14159265] </br>
-Tan of angles :  [0.         1.57079633 3.14159265] </br>
+Sins of angles:  `[0.0000000e+00 1.0000000e+00 1.2246468e-16]` </br>
+Cos of angles : ` [0.         1.57079633 3.14159265]` </br>
+Tan of angles : ` [0.         1.57079633 3.14159265]` </br>
 </br>
 </br>
 
@@ -264,9 +285,9 @@ print("Logarithm of Array: ",log_array)
 ```
 
 **Output** </br>
-Exponential of Array:  [2.20264658e+04 4.85165195e+08 1.06864746e+13]
+Exponential of Array:  `[2.20264658e+04 4.85165195e+08 1.06864746e+13]`
 </br>
-Logarithm of Array:  [2.30258509 2.99573227 3.40119738]
+Logarithm of Array:  `[2.30258509 2.99573227 3.40119738]`
 </br>
 
 ### Broadcasting
@@ -287,8 +308,8 @@ print("Original Array: ", array)
 print("Array after broadcasting : ", result)
 ```
 **Output** </br>
-Original Array:  [1 2 3] </br>
-Array after broadcasting :  [11 12 13]
+`Original Array:  [1 2 3]` </br>
+`Array after broadcasting :  [11 12 13]`
 </br>
 
 ### Sorting Array `sort()`
@@ -333,7 +354,7 @@ element = array_2d[1,2] # Accessing element at row 1, column 2
 print("Element at (1,2) : ", element)
 ```
 **Output** </br>
-Element at (1,2) :  6
+Element at (1,2) :  `6`
 </br>
 
 **2. Slicing Row:** 
@@ -343,7 +364,7 @@ print("First Row : ", row_slice)
 ```
 
 **Output** </br>
-First Row :  [1 2 3]
+`First Row :  [1 2 3]`
 </br>
 
 **3. Slicing Column:** 
@@ -353,7 +374,7 @@ print("Second Column: ", column_slice)
 ```
 
 **Output** </br>
-Second Column:  [2 5 8]
+`Second Column:  [2 5 8]`
 </br>
 
 ### Boolean Indexing
@@ -371,7 +392,7 @@ greater_than_20 = array[array > 20]
 print("Elements greater than 20 : ",greater_than_20)
 ```
 **Output** </br>
-Elements greater than 20 :  [30 40 60 80]
+`Elements greater than 20 :  [30 40 60 80]`
 </br>
 </br>
 
@@ -402,10 +423,10 @@ print("Standard deviation : ", std_dev)
 print("Variance : ", variance)
 ```
 **Output** </br>
-Mean  :  3.0</br>
-Median :  3.0</br>
-Standard deviation :  1.4142135623730951</br>
-Variance :  2.0
+Mean  :  `3.0`</br>
+Median :  `3.0`</br>
+Standard deviation :  `1.4142135623730951`</br>
+Variance :  `2.0`
 </br>
 </br>
 
