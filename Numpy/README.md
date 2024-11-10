@@ -505,7 +505,7 @@ Sorted Arrays:  [ 2  3  4  5  7  8 10]
 ### Array Indexing `[row:column]`
 ####  Basic Indexing and Slicing
 
-```
+```python
 import numpy as np
 
 # Create a array
@@ -518,14 +518,19 @@ last_element = array[-1]
 # Slicing the array
 slice_array = array[1:4]
 
+# Selecting Specific indices
+selected_elements = array[[1,3]]
+
 print("First Element: ", first_element)
 print("Last Element: ", last_element)
 print("Sliced Element: ", slice_array)
+print("Selected Elements :", selected_elements)
 ```
 **Output** </br>
 `First Element:  1` </br>
 `Last Element:  5` </br>
 `Sliced Element:  [2 4 5] `</br>
+`Selected Elements : [2 5]`
 </br>
 
 ```python

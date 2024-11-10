@@ -10,6 +10,10 @@ last_element = array[-1]
 # Slicing the array
 slice_array = array[1:4]
 
+# Selecting Specific indices
+selected_elements = array[[1,3]]
+
 print("First Element: ", first_element)
 print("Last Element: ", last_element)
 print("Sliced Element: ", slice_array)
+print("Selected Elements :", selected_elements)
