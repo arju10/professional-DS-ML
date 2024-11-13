@@ -312,3 +312,28 @@ print('Dataframe with shifted data: \n', df)
 | 2023-01-03 | 35          | 32.0          |
 | 2023-01-04 | 33          | 35.0          |
 | 2023-01-05 | 31          | 33.0          |
+
+### Cumulative sum and product
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Sales': [100, 200, 150, 300, 250]}
+df = pd.DataFrame(data)
+
+# Calculating cumulative sum and product
+df['cumulative sum'] = df['Sales'].cumsum()
+df['cumulative product'] = df['Sales'].cumprod()
+
+print('DataFrame with cumulative operations:\n', df)
+```
+***Output***
+`DataFrame with Cumulative Operations:`
+
+| Sales | Cumulative Sum | Cumulative Product |
+|-------|-----------------|--------------------|
+| 100   | 100             | 100                |
+| 200   | 300             | 20000              |
+| 150   | 450             | 3000000            |
+| 300   | 750             | 900000000          |
+| 250   | 1000            | 225000000000      |
