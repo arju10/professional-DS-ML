@@ -412,7 +412,7 @@ print('Pivot table with multiple aggregation: \n', pivot_table)
 
 Here, a pivot table is created with `sum` and `mean` as the aggregation functions.
 
-### Using map() for Value Replacement
+### Using `map()` for Value Replacement
 ```python
 import pandas as pd
 
@@ -436,3 +436,28 @@ print("Dataframe with mapped values: \n", df)
 | Charlie | Finance    | 3         |
 
 Here, the department names are mapped to department codes.
+
+### Detecting Duplicates
+```python
+iimport pandas as pd
+
+# Create a dataframe with duplicate rows
+data = {'ID':[1,2,2,3,4,4], 'Value': [10, 20,20,30,40,40]}
+df = pd.DataFrame(data)
+
+# Detecting duplicates
+duplicates = df[df.duplicated()]
+
+print('Duplicate Row : \n', duplicates)
+```
+***Output***
+`DataFrame with Duplicate Rows:`    
+
+| ID  | Value |
+|-----|-------|
+| 2   | 20    |
+| 4   | 40    |
+| 2   | 20    |
+| 4   | 40    |
+
+In this example, the rows with ID `2` and `4` are duplicates.
