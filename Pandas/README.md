@@ -86,3 +86,31 @@ print("Dataframe with Adjusted Scores :\n",df)
 | Charlie  | 95    | 95             |
 
 Here, this data frame includes a list of names, their original scores, and the adjusted scores:
+
+### Merging DataFrame with Different Keys
+```python
+import pandas as pd
+
+# Create two dataframe
+df1 = pd.DataFrame({'ID':[1,2,3], 'Name':['Alice', 'Bob', 'Charlie']})
+df2 = pd.DataFrame({'Emp_ID':[2,3,4], 'Department':['HR','Finance','IT']})
+
+#Merging with different keys
+merged_df = pd.merge(df1, df2, left_on='ID', right_on='Emp_ID', how='outer')
+
+print("Merged Dataframe: \n", merged_df)
+```
+***Output***
+| ID  | Name    | Emp_ID | Department |
+|-----|---------|--------|------------|
+| 1.0 | Alice   | NaN    | NaN        |
+| 2.0 | Bob     | 2.0    | HR         |
+| 3.0 | Charlie | 3.0    | Finance    |
+| NaN | NaN     | 4.0    | IT         |
+
+Here, the merged data frame combines two data sources, which may contain missing values
+- **ID**: Identifier from the first data source.
+- **Name**: Name from the first data source.
+- **Emp_ID**: Employee ID from the second data source.
+- **Department**: Department from the second data source.
+- **NaN** values indicate missing data from one of the sources.
