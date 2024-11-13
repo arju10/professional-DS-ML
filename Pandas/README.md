@@ -62,3 +62,27 @@ print("Sales Data in 2020: ", sales_in_2020)
 | A        | 100          |
 
 Here, output for sales data in `2020`, showing the total sales for each category.
+
+
+### Using Apply with Lambda Functions
+
+```python
+import pandas as pd
+
+# Create Dataframe
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Score':[85,90,95]}
+df = pd.DataFrame(data)
+
+# Applying a lambda function to modify scores
+df['Adjusted Score'] = df['Score'].apply(lambda x: x+5 if x<90 else x)
+
+print("Dataframe with Adjusted Scores :\n",df)
+```
+***Output***
+| Name     | Score | Adjusted Score |
+|----------|-------|----------------|
+| Alice    | 85    | 90             |
+| Bob      | 90    | 90             |
+| Charlie  | 95    | 95             |
+
+Here, this data frame includes a list of names, their original scores, and the adjusted scores:
