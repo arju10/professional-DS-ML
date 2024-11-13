@@ -213,3 +213,23 @@ print("Weekly Sales : \n", weekly_sales)
 | 2023-01-01 | 100   |
 | 2023-01-08 | 1950  |
 | 2023-01-15 | 700   |
+
+### Conditional Filtering with Multiple Conditions
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'], 'Score':[85, 80,40,70], 'Passed':[True, False, True, False]}
+df = pd.DataFrame(data)
+
+# Filtering with multiple conditions
+filtered_df = df[(df['Score'] > 80) & (df['Passed'] == True)]
+
+print("FIltered Dataframe : \n", filtered_df)
+```
+***Output***
+
+`Example Filtered DataFrame : `
+| Name  | Score | Passed |
+|-------|-------|--------|
+| Alice | 85    | True   |
