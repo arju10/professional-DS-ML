@@ -114,3 +114,28 @@ Here, the merged data frame combines two data sources, which may contain missing
 - **Emp_ID**: Employee ID from the second data source.
 - **Department**: Department from the second data source.
 - **NaN** values indicate missing data from one of the sources.
+
+### Handling Missing Values with Custom Functions
+```python
+import pandas as pd
+import numpy as np
+
+# Creating dataframe with missing values
+data = {'Name':['Alice', 'Bob', np.nan, 'David'], 'Age':[13,np.nan,32,20]}
+df = pd.DataFrame(data)
+
+# Filling Missing Values using a custom function
+df['Name'].fillna('Unknown', inplace=True)
+df['Age'].fillna(df['Age'].median(), inplace=True)
+
+print("Dataframe after handling Missing values: \n", df)
+```
+***Output***
+| Name    | Age  |
+|---------|------|
+| Alice   | 13.0 |
+| Bob     | 20.0 |
+| Unknown | 32.0 |
+| David   | 20.0 |
+
+Here,missing values in the `Name` or `Age` columns were replaced with a default string (`"Unknown"`) or a specified numeric value.
