@@ -286,3 +286,29 @@ print("Dataframe with rolling mean : \n", df)
 | 2023-01-08 | 350   | 350.000000   |
 | 2023-01-09 | 300   | 316.666667   |
 | 2023-01-10 | 400   | 350.000000   |
+
+### Shift and Lagging Data
+```python
+import pandas as pd
+
+# Create Dataframe
+data = {'Date': pd.date_range(start='2023-01-01', periods=5, freq='D'),
+        'Temperature': [30, 32, 35,33, 31]}
+
+df = pd.DataFrame(data)
+
+# Shifting data by one to create a lag
+df['Prev Day Temp'] = df['Temperature'].shift(1)
+
+print('Dataframe with shifted data: \n', df)
+```
+***Output***
+`DataFrame with Previous Day Temperature:`
+
+| Date       | Temperature | Prev Day Temp |
+|------------|-------------|---------------|
+| 2023-01-01 | 30          | NaN           |
+| 2023-01-02 | 32          | 30.0          |
+| 2023-01-03 | 35          | 32.0          |
+| 2023-01-04 | 33          | 35.0          |
+| 2023-01-05 | 31          | 33.0          |
