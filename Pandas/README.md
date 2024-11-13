@@ -256,3 +256,33 @@ print('Dataframe with categorical performance : \n', df)
 | Bob     | 70    | Poor        |
 | Charlie | 95    | Excellent   |
 | David   | 60    | Poor        |
+
+### Rolling Window Calculations
+```python
+import pandas as pd
+
+# Create a time series dataframe
+data_range = pd.date_range(start='2023-01-01', periods=10, freq='D')
+data = {'Sales': [100, 200, 150, 300, 250, 400, 300, 350, 300, 400]}
+df = pd.DataFrame(data, index= data_range)
+
+# Calculating a rolling mean with a window of 3 days
+df['Rolling Mean'] = df['Sales'].rolling(window=3).mean()
+
+print("Dataframe with rolling mean : \n", df)
+```
+***Output***
+`DataFrame with Rolling Mean : ` </br>
+
+| Date       | Sales | Rolling Mean |
+|------------|-------|--------------|
+| 2023-01-01 | 100   | NaN          |
+| 2023-01-02 | 200   | NaN          |
+| 2023-01-03 | 150   | 150.000000   |
+| 2023-01-04 | 300   | 216.666667   |
+| 2023-01-05 | 250   | 233.333333   |
+| 2023-01-06 | 400   | 316.666667   |
+| 2023-01-07 | 300   | 316.666667   |
+| 2023-01-08 | 350   | 350.000000   |
+| 2023-01-09 | 300   | 316.666667   |
+| 2023-01-10 | 400   | 350.000000   |
