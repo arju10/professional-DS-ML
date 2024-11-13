@@ -233,3 +233,26 @@ print("FIltered Dataframe : \n", filtered_df)
 | Name  | Score | Passed |
 |-------|-------|--------|
 | Alice | 85    | True   |
+
+### Creating Custom Categorical Data
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name':['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85, 70, 95,60]}
+df = pd.DataFrame(data)
+
+# Creating a new column with categorical data
+df['Performance'] = pd.cut(df['Score'], bins=[0,70,90,100], labels=['Poor', 'Average', 'Excellent'])
+
+print('Dataframe with categorical performance : \n', df)
+```
+***Output***
+`DataFrame with Categorical Performance : `
+
+| Name    | Score | Performance |
+|---------|-------|-------------|
+| Alice   | 85    | Average     |
+| Bob     | 70    | Poor        |
+| Charlie | 95    | Excellent   |
+| David   | 60    | Poor        |
