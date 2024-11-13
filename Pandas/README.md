@@ -411,3 +411,28 @@ print('Pivot table with multiple aggregation: \n', pivot_table)
 | SF   | 2021  | 250.0 | 250.0 |
 
 Here, a pivot table is created with `sum` and `mean` as the aggregation functions.
+
+### Using map() for Value Replacement
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Department':['HR', 'IT', 'Finance']}
+df = pd.DataFrame(data)
+
+# Mapping department to codes
+department_map = {'HR':1, 'IT':2, 'Finance':3}
+df['Dept Code'] = df['Department'].map(department_map)
+
+print("Dataframe with mapped values: \n", df)
+```
+***Output***
+`DataFrame with Mapped Values: `
+
+| Name    | Department | Dept Code |
+|---------|------------|-----------|
+| Alice   | HR         | 1         |
+| Bob     | IT         | 2         |
+| Charlie | Finance    | 3         |
+
+Here, the department names are mapped to department codes.
