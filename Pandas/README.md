@@ -131,6 +131,7 @@ df['Age'].fillna(df['Age'].median(), inplace=True)
 print("Dataframe after handling Missing values: \n", df)
 ```
 ***Output***
+`Dataframe after handling Missing values:` </br>
 | Name    | Age  |
 |---------|------|
 | Alice   | 13.0 |
@@ -139,3 +140,29 @@ print("Dataframe after handling Missing values: \n", df)
 | David   | 20.0 |
 
 Here,missing values in the `Name` or `Age` columns were replaced with a default string (`"Unknown"`) or a specified numeric value.
+
+### Pivoting DataFrame
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Date':['2023-01-01', '2023-01-02','2023-01-01','2023-01-02'],
+        'City':['NY', 'NY','LA', 'LA'],
+        'Sales':[200,250,300,400]
+        }
+
+df = pd.DataFrame(data)
+
+# Pivoting the Dataframe
+pivot_df = df.pivot(index='Date', columns='City', values='Sales')
+
+print('Pivoted Dataframe : \n', pivot_df)
+```
+***Output***
+
+`Pivoted Dataframe :` </br>
+| Date       | LA   | NY   |
+|------------|------|------|
+| 2023-01-01 | 300  | 200  |
+| 2023-01-02 | 400  | 250  |
+
