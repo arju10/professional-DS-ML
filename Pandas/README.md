@@ -166,3 +166,26 @@ print('Pivoted Dataframe : \n', pivot_df)
 | 2023-01-01 | 300  | 200  |
 | 2023-01-02 | 400  | 250  |
 
+### Melting DataFrame
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'ID':[1,2], 'Math':[90,79], 'Science':[85,88]}
+df = pd.DataFrame(data)
+
+# Melting the dataframe
+melted_dataframe = pd.melt(df,id_vars=['ID'], value_vars=['Math', 'Science'], var_name='Subject', value_name='Score')
+
+print("Melted Dataframe : \n", melted_dataframe)
+```
+***Output***
+
+`Melted DataFrame :` </br>
+
+| ID  | Subject | Score |
+|-----|---------|-------|
+| 1   | Math    | 90    |
+| 2   | Math    | 79    |
+| 1   | Science | 85    |
+| 2   | Science | 88    |
