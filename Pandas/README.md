@@ -358,3 +358,29 @@ print('Merged Dataframe on multiple columns : \n', merged_df)
 |----|------|---------|-------|
 | 1  | 2020 | Alice   | 75    |
 | 3  | 2023 | Charlie | 92    |
+
+### Handling Outliers
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Value': [10, 12, 14, 100, 15, 13, 12]}
+df = pd.DataFrame(data)
+
+# Indentifying outliers using the IQR method
+Q1 = df['Value'].quantile(0.25)
+Q3 = df['Value'].quantile(0.75)
+IQR = Q3 - Q1
+outliers = df[(df['Value'] < (Q1 - 1.5 * IQR)) | (df['Value'] > (Q3 + 1.5 * IQR))]
+
+print('Outliers: \n', outliers)
+```
+***Output***
+`Example DataFrame with Outliers:`
+
+| Value |
+|-------|
+| 10    |
+| 15    |
+| 20    |
+| 100   |
