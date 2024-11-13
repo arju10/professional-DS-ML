@@ -376,7 +376,7 @@ outliers = df[(df['Value'] < (Q1 - 1.5 * IQR)) | (df['Value'] > (Q3 + 1.5 * IQR)
 print('Outliers: \n', outliers)
 ```
 ***Output***
-`Example DataFrame with Outliers:`
+`DataFrame with Outliers:`
 
 | Value |
 |-------|
@@ -384,3 +384,30 @@ print('Outliers: \n', outliers)
 | 15    |
 | 20    |
 | 100   |
+
+Here, the value `100` is an outlier compared to the other values.
+
+### Creating a pivot table with multiple aggregation
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'City':['NY', 'LA', 'NY','SF','LA'], 'Year':[2020,2020,2021,2021,2020], 'Sales':[100, 150, 200, 250,300]}
+df = pd.DataFrame(data)
+
+# Create a pivot table with multiple aggregation
+pivot_table = pd.pivot_table(df, values='Sales', index='City', columns='Year', aggfunc=['sum', 'mean'])
+
+print('Pivot table with multiple aggregation: \n', pivot_table)
+```
+***Output***
+`Pivot Table with Multiple Aggregation : `
+
+| City | Year  | Sum   | Mean  |
+|------|-------|-------|-------|
+| LA   | 2020  | 450.0 | 225.0 |
+| NY   | 2020  | 100.0 | 100.0 |
+| NY   | 2021  | 200.0 | 200.0 |
+| SF   | 2021  | 250.0 | 250.0 |
+
+Here, a pivot table is created with `sum` and `mean` as the aggregation functions.
