@@ -189,3 +189,27 @@ print("Melted Dataframe : \n", melted_dataframe)
 | 2   | Math    | 79    |
 | 1   | Science | 85    |
 | 2   | Science | 88    |
+
+### Time based indexing and resampling
+```python
+import pandas as pd
+
+# Create time Series Dataframe
+date_range = pd.date_range(start='2023-01-01', periods=10, freq='D')
+data = {'Sales':[100, 200, 150, 300, 250, 400, 300, 350, 300, 400]}
+df = pd.DataFrame(data, index=date_range)
+
+# Resampling to find weekly sales
+weekly_sales = df.resample('W').sum()
+
+print("Weekly Sales : \n", weekly_sales)
+```
+***Output***
+
+`Weekly Sales :` </br>
+
+| Date       | Sales |
+|------------|-------|
+| 2023-01-01 | 100   |
+| 2023-01-08 | 1950  |
+| 2023-01-15 | 700   |
