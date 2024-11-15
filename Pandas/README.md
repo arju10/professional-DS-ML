@@ -665,3 +665,28 @@ print('Dataframe info and Memory usage : \n', df_info)
 
 - **Dtypes**: int64 (2 columns)
 - **Memory Usage**: 15.8 KB
+
+### Filter with `isin()`
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name' : ['Alice', 'Bob', 'Charlie', 'David'], 'City': ['NY','LA','SF','NY']}
+df = pd.DataFrame(data)
+
+# filter with isin()
+filtered_df = df[df['City'].isin(['NY','SF'])]
+
+print("Filtered Dataframe with isin method: \n", filtered_df)
+
+```
+***Output***
+`Filtered Dataframe with isin method: `
+
+|    | Name     | City |
+|----|----------|------|
+|  0 | Alice    | NY   |
+|  2 | Charlie  | SF   |
+|  3 | David    | NY   |
+
+This section demonstrates how to filter rows in a DataFrame based on a list of values using the `isin` method.
