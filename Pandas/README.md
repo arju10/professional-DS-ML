@@ -537,3 +537,27 @@ print("Dataframe with squared values : \n", df_transformed)
 | David   | 92    | 1.0  |
 
 In this example, the `scores` are ranked in `descending` order, with the highest score receiving the highest rank.
+
+### Create dummy variables
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'City': ['NY', 'LA', 'SF', 'NY']}
+df = pd.DataFrame(data)
+
+# Creating dummy varibales
+dummies = pd.get_dummies(df['City'], prefix='City')
+
+print('Dummy varibales dataframe: \n', dummies)
+```
+***Output***
+`DataFrame with Squared Values : `
+
+| A  | B  |
+|----|----|
+| 1  | 16 |
+| 4  | 25 |
+| 9  | 36 |
+
+In this example, each value in columns `A` and `B` has been squared.
