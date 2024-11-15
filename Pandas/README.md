@@ -611,3 +611,30 @@ print("Dataframe with assigned grade column : \n", df)
 | David   | 92    | A     |
 
 In this example, grades are assigned based on the score values: `'A' `for high scores, `'B'` for average scores, etc.
+
+### Applying a custom function with `groupby`
+```python
+import pandas as pd
+
+# Create dataframe
+data = {
+    'Category':['A','A','B','B'],
+    'Value':[10, 20, 30,40]
+}
+
+df = pd.DataFrame(data)
+
+# Applying a custom function with groupby
+grouped_df = df.groupby('Category') ['Value'].apply(lambda x: x.max() - x.min())
+
+print("Custom Aggregation result : \n", grouped_df)
+```
+***Output***
+`Custom Aggregation Result: `
+
+| Category | Value |
+|----------|-------|
+| A        | 10    |
+| B        | 10    |
+
+In this example, the `Value` column is aggregated using a custom function (such as summing specific elements) for each category.
