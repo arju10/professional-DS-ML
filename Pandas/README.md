@@ -561,3 +561,27 @@ print('Dummy varibales dataframe: \n', dummies)
 | 9  | 36 |
 
 In this example, each value in columns `A` and `B` has been squared.
+
+### Use `query()` for filtering
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name' : ['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85,90,78,92]}
+df = pd.DataFrame(data)
+
+# Use query for filtering
+filtered_df = df.query('Score > 80')
+
+print('Filtered dataframe using query : \n', filtered_df)
+```
+***Output***
+`Filtered DataFrame : `
+
+| Name   | Score |
+|--------|-------|
+| Alice  | 85    |
+| Bob    | 90    |
+| David  | 92    |
+
+Here, only rows with `scores` above a certain threshold are included in the filtered DataFrame.
