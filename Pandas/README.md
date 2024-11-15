@@ -638,3 +638,30 @@ print("Custom Aggregation result : \n", grouped_df)
 | B        | 10    |
 
 In this example, the `Value` column is aggregated using a custom function (such as summing specific elements) for each category.
+
+### DataFrame info and memory usage
+```python
+import pandas as pd
+
+# Create dataframe
+data = {
+    'A': range(1000),
+    'B':range(1000, 2000)
+}
+df = pd.DataFrame(data)
+
+# Displaying dataframe info and memory usage
+df_info = df.info(memory_usage='deep')
+
+print('Dataframe info and Memory usage : \n', df_info)
+```
+***Output***
+`DataFrame Info and Memory Usage : `
+
+| #   | Column | Non-Null Count | Dtype | 
+| --- | ------ | -------------- | ----- |
+| 0   | A      | 1000 non-null  | int64 |
+| 1   | B      | 1000 non-null  | int64 |
+
+- **Dtypes**: int64 (2 columns)
+- **Memory Usage**: 15.8 KB
