@@ -502,7 +502,7 @@ df['Rank'] = df['Score'].rank(ascending=False)
 print('Dataframe with ranked scores : \n', df)
 ```
 ***Output***
-`Example DataFrame with Ranked Scores:`
+`DataFrame with Ranked Scores:`
 
 | Name    | Score | Rank |
 |---------|-------|------|
@@ -512,3 +512,28 @@ print('Dataframe with ranked scores : \n', df)
 | David   | 92    | 1.0  |
 
 In this example, the `scores` are ranked in descending order, with the highest score receiving the highest rank.
+
+### Using `applymap()` for element-wise operations
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'A': [1,2,3], 'B':[4,5,6]}
+df = pd.DataFrame(data)
+
+# Applying an operation to each element in the Dataframe
+df_transformed = df.applymap(lambda x:x**2)
+
+print("Dataframe with squared values : \n", df_transformed)
+```
+***Output***
+`DataFrame with Ranked Scores: `
+
+| Name    | Score | Rank |
+|---------|-------|------|
+| Alice   | 85    | 3.0  |
+| Bob     | 90    | 2.0  |
+| Charlie | 78    | 4.0  |
+| David   | 92    | 1.0  |
+
+In this example, the `scores` are ranked in `descending` order, with the highest score receiving the highest rank.
