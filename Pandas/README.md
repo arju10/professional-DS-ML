@@ -485,4 +485,30 @@ print("Dataframe after exploring lists: \n", exploded_df)
 | 2  | Running   |
 | 2  | Cycling   |
 
-In this example, each hobby in a list associated with an ID is expanded into its own row.
+In this example, each `hobby` in a list associated with an ID is expanded into its own row.
+
+
+### Using `rank()` to rank values
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name' : ['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85,90,78,92]}
+df = pd.DataFrame(data)
+
+# Ranking scores in descending order
+df['Rank'] = df['Score'].rank(ascending=False)
+
+print('Dataframe with ranked scores : \n', df)
+```
+***Output***
+`Example DataFrame with Ranked Scores:`
+
+| Name    | Score | Rank |
+|---------|-------|------|
+| Alice   | 85    | 3.0  |
+| Bob     | 90    | 2.0  |
+| Charlie | 78    | 4.0  |
+| David   | 92    | 1.0  |
+
+In this example, the `scores` are ranked in descending order, with the highest score receiving the highest rank.
