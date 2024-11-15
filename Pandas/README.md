@@ -461,3 +461,28 @@ print('Duplicate Row : \n', duplicates)
 | 4   | 40    |
 
 In this example, the rows with ID `2` and `4` are duplicates.
+
+### Using `explode()` for list in columns
+```python
+import pandas as pd
+
+# Create a dataframe with lists in a column
+data = {'ID':[1,2], 'Hobbies':[['Reading', 'Swimming'], ['Running', 'Cycling'] ]}
+df = pd.DataFrame(data)
+
+# Explodeing the 'Hobbies' Column
+exploded_df = df.explode('Hobbies')
+
+print("Dataframe after exploring lists: \n", exploded_df)
+```
+***Output***
+`DataFrame After Exploring Lists:`
+
+| ID | Hobbies   |
+|----|-----------|
+| 1  | Reading   |
+| 1  | Swimming  |
+| 2  | Running   |
+| 2  | Cycling   |
+
+In this example, each hobby in a list associated with an ID is expanded into its own row.
