@@ -585,3 +585,29 @@ print('Filtered dataframe using query : \n', filtered_df)
 | David  | 92    |
 
 Here, only rows with `scores` above a certain threshold are included in the filtered DataFrame.
+
+
+### Adding a new column using `assign()`
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name' : ['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85,90,78,92]}
+df = pd.DataFrame(data)
+
+# Adding a new column using assign
+df = df.assign(Grade= lambda x: ['A' if Score >= 90 else 'B' for Score in x['Score']])
+
+print("Dataframe with assigned grade column : \n", df)
+```
+***Output***
+`DataFrame with Assigned Grade Column :`
+
+| Name    | Score | Grade |
+|---------|-------|-------|
+| Alice   | 85    | B     |
+| Bob     | 90    | A     |
+| Charlie | 78    | B     |
+| David   | 92    | A     |
+
+In this example, grades are assigned based on the score values: `'A' `for high scores, `'B'` for average scores, etc.
