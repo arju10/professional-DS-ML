@@ -723,3 +723,29 @@ print("COncatenated DataFrame : \n", concat_df)
 
 
 This section demonstrates how to concatenate two DataFrames vertically.
+
+### Sorting a DataFrame by Multiple Columns
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name' : ['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85,90,78,92], 'Age': [25,37,35,21]}
+df = pd.DataFrame(data)
+
+# Sorting by multiple columns
+sorted_df = df.sort_values(by=['Score', 'Age'], ascending=[False, True])
+
+print("Sorted Dataframe by multiple columns: \n", sorted_df)
+```
+***Output***
+`Sorting a DataFrame by Multiple Columns : ` </br>
+
+| Index | Name    | Score | Age |
+|-------|---------|-------|-----|
+| 3     | David   | 92    | 21  |
+| 1     | Bob     | 90    | 37  |
+| 0     | Alice   | 85    | 25  |
+| 2     | Charlie | 78    | 35  |
+
+1. **Primary Sorting by** `Score` in descending order.
+2. **Secondary Sorting by** `Age` in ascending order.
