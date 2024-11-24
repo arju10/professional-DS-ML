@@ -807,3 +807,32 @@ print("Dataframe after exploding nested json columns:\n", exploded_df)
 | 0     | 1   | Gaming    |
 | 1     | 2   | Hiking    |
 | 1     | 2   | Drawing   |
+
+
+### Using `pipe()` for method chaining
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85, 90, 78, 92]}
+df = pd.DataFrame(data)
+
+# Custom function for modifying the dataframe
+def add_grade_column(df):
+    df['Grade'] = df['Score'].apply(lambda x: 'A' if x >=90 else 'B')
+    return df
+
+# Using pipe() for method chaining
+df = df.pipe(add_grade_column)
+
+print("Dataframe after using pipe : \n", df)
+```
+***Output***
+`DataFrame after Using Pipe`
+
+| Index | Name     | Score | Grade |
+|-------|----------|-------|-------|
+| 0     | Alice    | 85    | B     |
+| 1     | Bob      | 90    | A     |
+| 2     | Charlie  | 78    | B     |
+| 3     | David    | 92    | A     |
