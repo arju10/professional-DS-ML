@@ -780,6 +780,7 @@ print("Styled dataframe with conditional formatting has been saved to 'styled_da
 | 3     | David   | 92      |
 
 **Note:** Cells with scores greater than 80 are highlighted in yellow. To view the styling, check the `styled_dataframe.html` file in a browser.
+![alt text](image.png)
 
 ### Using `explode()` for nested JSON columns
 ```python
@@ -836,3 +837,27 @@ print("Dataframe after using pipe : \n", df)
 | 1     | Bob      | 90    | A     |
 | 2     | Charlie  | 78    | B     |
 | 3     | David    | 92    | A     |
+
+
+### Multi Index Slicing
+```python
+import pandas as pd
+
+# Create Multi Index Dataframe
+arrays = [['A', 'A', 'B', 'B'], [2020, 2021, 2022, 2023]]
+index = pd.MultiIndex.from_arrays(arrays, names=('Category', 'Year'))
+data = [100, 150, 200, 250]
+df = pd.DataFrame(data, index=index, columns=['Sales'])
+
+# Slicing the  mutiindex Dataframe
+sliced_df = df.loc['A']
+
+print("Sliced  mutiindex Dataframe \n", sliced_df)
+```
+***Output***
+`Sliced MultiIndex DataFrame`
+
+| Year | Sales |
+|------|-------|
+| 2020 | 100   |
+| 2021 | 150   |
