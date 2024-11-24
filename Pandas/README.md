@@ -780,3 +780,30 @@ print("Styled dataframe with conditional formatting has been saved to 'styled_da
 | 3     | David   | 92      |
 
 **Note:** Cells with scores greater than 80 are highlighted in yellow. To view the styling, check the `styled_dataframe.html` file in a browser.
+
+### Using `explode()` for nested JSON columns
+```python
+import pandas as pd
+
+# Create a dataframe with nested lists
+data = {
+    'ID' : [1,2],
+    'Hobbies':[['Reading', 'Swimming', 'Gaming'], ['Hiking', 'Drawing']]
+}
+df = pd.DataFrame(data)
+
+# Exploding the 'Hobbies' column
+exploded_df = df.explode('Hobbies')
+
+print("Dataframe after exploding nested json columns:\n", exploded_df)
+```
+***Output***
+`DataFrame after Exploding Nested JSON Columns`
+
+| Index | ID  | Hobbies   |
+|-------|-----|-----------|
+| 0     | 1   | Reading   |
+| 0     | 1   | Swimming  |
+| 0     | 1   | Gaming    |
+| 1     | 2   | Hiking    |
+| 1     | 2   | Drawing   |
