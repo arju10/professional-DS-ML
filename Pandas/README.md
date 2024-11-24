@@ -861,3 +861,40 @@ print("Sliced  mutiindex Dataframe \n", sliced_df)
 |------|-------|
 | 2020 | 100   |
 | 2021 | 150   |
+
+### Adding prefix or suffix to column names
+```python
+import pandas as pd
+
+# Create a dataframe
+data = {
+    'Math': [90, 80],
+    'Science':[85,88]
+}
+df = pd.DataFrame(data)
+
+# Adding prefix to column names
+df_prefixed = df.add_prefix('Grade_')
+
+# Adding suffix to column names
+df_suffixed = df.add_suffix('_Score')
+
+print("Dataframe with Prefix :\n", df_prefixed)
+print('\n')
+print("Dataframe with Suffix :\n", df_suffixed)
+```
+***Output***
+`DataFrame with Prefix`
+
+| Index | Grade_Math | Grade_Science |
+|-------|------------|---------------|
+| 0     | 90         | 85            |
+| 1     | 80         | 88            |
+
+` DataFrame with Suffix`
+
+| Index | Math_Score | Science_Score |
+|-------|------------|---------------|
+| 0     | 90         | 85            |
+| 1     | 80         | 88            |
+
