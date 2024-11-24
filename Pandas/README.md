@@ -969,3 +969,30 @@ print("Filtered Dataframe with query() and varibales: \n", filtered_df)
 | 0     | Alice | 85    | 25  |
 | 1     | Bob   | 90    | 37  |
 | 3     | David | 92    | 21  |
+
+
+
+### Using `groupby` with custom aggregation
+```python
+import pandas as pd
+
+# Create dataframe
+data = {
+    'Category':['A','A','B','B'],
+    'Value':[10, 20, 30,40]
+}
+
+df = pd.DataFrame(data)
+
+# using groupby with custom aggregation
+custom_df = df.groupby('Category').agg(max_value = ('Value', 'max'), min_value=('Value', 'min'))
+
+print("Custom Aggregation result : \n", custom_df)
+```
+***Output***
+`Custom Aggregation Result`
+
+| Category | max_value | min_value |
+|----------|-----------|-----------|
+| A        | 20        | 10        |
+| B        | 40        | 30        |
