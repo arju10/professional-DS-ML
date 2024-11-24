@@ -944,3 +944,28 @@ print("Renamed Dataframe : \n",df_renamed)
 |----------|-------|-------|
 | Student1 | Alice | 78    |
 | Student2 | Bob   | 92    |
+
+
+### Use `query()` with variables
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name' : ['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85,90,78,92]}
+df = pd.DataFrame(data)
+
+# Using query() with varibales
+threshold = 80
+filtered_df = df.query('Score > @threshold')
+
+print("Filtered Dataframe with query() and varibales: \n", filtered_df)
+```
+***Output***
+
+`Filtered DataFrame with `query()` and Variables`
+
+| Index | Name  | Score | Age |
+|-------|-------|-------|-----|
+| 0     | Alice | 85    | 25  |
+| 1     | Bob   | 90    | 37  |
+| 3     | David | 92    | 21  |
