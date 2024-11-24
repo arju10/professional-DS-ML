@@ -749,3 +749,34 @@ print("Sorted Dataframe by multiple columns: \n", sorted_df)
 
 1. **Primary Sorting by** `Score` in descending order.
 2. **Secondary Sorting by** `Age` in ascending order.
+
+### Displaying the styled Dataframe 
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'], 'Score': [85, 90, 78, 92]}
+df = pd.DataFrame(data)
+
+# Applying styles to highlight scores above 80
+styled_df = df.style.map(
+    lambda x: 'background-color: yellow' if isinstance(x, int) and x > 80 else ''
+)
+
+# Save styled DataFrame to HTML
+styled_df.to_html("styled_dataframe.html")
+
+# Displaying the styled Dataframe
+print("Styled dataframe with conditional formatting has been saved to 'styled_dataframe.html'.")
+```
+***Output***
+`"Styled dataframe with conditional formatting has been saved to 'styled_dataframe.html'."`
+
+| Index | Name    | Score   |
+|-------|---------|---------|
+| 0     | Alice   | 85      |
+| 1     | Bob     | 90      |
+| 2     | Charlie | 78      |
+| 3     | David   | 92      |
+
+**Note:** Cells with scores greater than 80 are highlighted in yellow. To view the styling, check the `styled_dataframe.html` file in a browser.
