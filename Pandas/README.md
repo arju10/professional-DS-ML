@@ -1197,3 +1197,37 @@ print("Dataframe after resetting index: \n", df)
 | SF   | 2021 | 250   |
 | LA   | 2020 | 300   |
 
+
+### Working with time-zone
+```python
+import pandas as pd
+
+# Create a time series dataframe
+data_range = pd.date_range(start='2023-01-01', periods=10, freq='D')
+data = {'Sales': [100, 200, 150, 300, 250, 400, 300, 350, 300, 400]}
+df = pd.DataFrame(data, index=data_range)
+
+# Localizing the timezone to UTC (or any initial timezone)
+df.index = df.index.tz_localize('UTC')
+
+# Converting to a different timezone (US/Eastern)
+df = df.tz_convert('US/Eastern')
+
+print("Time series dataframe with time zone: \n", df)
+
+```
+***Output***
+`Time series dataframe with time zone:`
+
+| DateTime                     | Sales |
+|------------------------------|-------|
+| 2022-12-31 19:00:00-05:00   | 100   |
+| 2023-01-01 19:00:00-05:00   | 200   |
+| 2023-01-02 19:00:00-05:00   | 150   |
+| 2023-01-03 19:00:00-05:00   | 300   |
+| 2023-01-04 19:00:00-05:00   | 250   |
+| 2023-01-05 19:00:00-05:00   | 400   |
+| 2023-01-06 19:00:00-05:00   | 300   |
+| 2023-01-07 19:00:00-05:00   | 350   |
+| 2023-01-08 19:00:00-05:00   | 300   |
+| 2023-01-09 19:00:00-05:00   | 400   |
