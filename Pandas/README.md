@@ -1077,3 +1077,34 @@ print("Combining Dataframe with Multi-level Indexes: \n ", combined_df)
 | B        | 2022 | 200   | 500    |
 |          | 2023 | 250   | 6000   |
 
+
+### Using `rolling()` with custom functions
+```python
+import pandas as pd
+
+# Create a time series dataframe
+data_range = pd.date_range(start='2023-01-01', periods=10, freq='D')
+data = {'Sales': [100, 200, 150, 300, 250, 400, 300, 350, 300, 400]}
+df = pd.DataFrame(data, index= data_range)
+
+# Applying a custom function with rolling()
+df['Rolling Sum'] = df['Sales'].rolling(window=3).apply(lambda x:x.sum() if x.sum() > 50 else 0)
+
+print("Dataframe with custom rolling sum : \n", df)
+```
+***Output***
+
+`DataFrame with Custom Rolling Sum`
+
+| Date       | Sales | Rolling Sum |
+|------------|-------|-------------|
+| 2023-01-01 | 100   | NaN         |
+| 2023-01-02 | 200   | NaN         |
+| 2023-01-03 | 150   | 450.0       |
+| 2023-01-04 | 300   | 650.0       |
+| 2023-01-05 | 250   | 700.0       |
+| 2023-01-06 | 400   | 950.0       |
+| 2023-01-07 | 300   | 950.0       |
+| 2023-01-08 | 350   | 1050.0      |
+| 2023-01-09 | 300   | 950.0       |
+| 2023-01-10 | 400   | 1050.0      |
