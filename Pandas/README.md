@@ -35,13 +35,42 @@ Here,the data is grouped by `Category`, and for each category, we calculate:
 - **Sum** of the `Value` column
 - **Mean** of the `Value` column
 
-### Explanation of Columns:
+**Explanation of Columns:**
 - **Category**: The category label for each group.
 - **Value (sum)**: The total sum of values within each category.
 - **Value (mean)**: The average value within each category.
 
-### MutiIndex DataFrame Operations
+### Grouping & Aggregation
 
+Grouping data frame using aggregation functions, including `sum`, `max ` and `mean`, calculated per category.
+
+```python
+import pandas as pd
+
+# Create dataframe
+data = {
+    'Category':['A','A','B','B'],
+    'Values':[10, 20, 30,40]
+}
+df = pd.DataFrame(data)
+
+# Grouping by 'category' and calculating the sum and mean
+grouped_df = df.groupby('Category').agg({'Values': ['sum', 'mean','max']})
+
+print("Grouped Data Frame with with multiple functions \n\n", grouped_df)
+```
+
+***Output:***
+
+`Custom Aggregation Result:`
+
+| Category | sum | mean | max |
+|----------|-----|------|-----|
+| A        |  30 | 15.0 |  20 |
+| B        |  70 | 35.0 |  40 |
+
+
+### MutiIndex DataFrame Operations
 ```python
 import pandas as pd
 
@@ -1375,3 +1404,56 @@ print("Dataframe with evaluated calculation\n",df)
 | 2 | 3 | 7 | 17 |
 | 3 | 4 | 8 | 20 |
 
+
+### Merging indicator for tracing source
+```python
+import pandas as pd
+
+# Create dataframe
+df1 = pd.DataFrame({'ID': [1,2,3,4] ,'Name' : ['Alice', 'Bob', 'Charlie', 'David']})
+df2 = pd.DataFrame({'ID': [3,4,5,6] ,'Name' : ['Charlie', 'David','Robin','Michale']})
+
+
+# Merging with indicator to track the source
+merged_df = pd.merge(df1, df2, on='ID', how='outer', indicator=True)
+
+print('Merged dataframe with  indicator: \n', merged_df)
+```
+***Output***
+`Merged DataFrame with Indicator:`
+
+| ID | Name_x   | Name_y   | _merge     |
+|----|----------|----------|------------|
+|  1 | Alice    | NaN      | left_only  |
+|  2 | Bob      | NaN      | left_only  |
+|  3 | Charlie  | Charlie  | both       |
+|  4 | David    | David    | both       |
+|  5 | NaN      | Robin    | right_only |
+|  6 | NaN      | Michale  | right_only |
+
+### Time Series with Business days
+```python
+import pandas as pd
+
+# Create a time series dataframe
+data_range = pd.date_range(start='2023-01-01', periods=10, freq='B')
+data = {'Sales': range(10)}
+df = pd.DataFrame(data, index= data_range)
+
+print("Time series Dataframe with business days : \n", df)
+```
+***Output***
+`Time Series DataFrame with Business Days:`
+
+| Date       | Sales |
+|------------|-------|
+| 2023-01-02 |   0   |
+| 2023-01-03 |   1   |
+| 2023-01-04 |   2   |
+| 2023-01-05 |   3   |
+| 2023-01-06 |   4   |
+| 2023-01-09 |   5   |
+| 2023-01-10 |   6   |
+| 2023-01-11 |   7   |
+| 2023-01-12 |   8   |
+| 2023-01-13 |   9   |
