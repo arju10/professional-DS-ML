@@ -282,6 +282,32 @@ print('Dataframe with categorical performance : \n', df)
 | Charlie | 95    | Excellent   |
 | David   | 60    | Poor        |
 
+### Binning Data using `pd.cut`
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Score': [85, 70, 95,60, 100, 90]}
+df = pd.DataFrame(data)
+
+# Binning the scores into categories
+df['Grade'] = pd.cut(df['Score'], bins=[0,59,69,79,89,100], labels=['F', 'D', 'C', 'B','A'])
+
+print('Dataframe with binned scores : \n', df)
+```
+***Output***
+`Dataframe with binned scores:`
+
+| Score | Grade |
+|-------|-------|
+| 85    | B     |
+| 70    | C     |
+| 95    | A     |
+| 60    | D     |
+| 100   | A     |
+| 90    | A     |
+
+
 ### Rolling Window Calculations
 ```python
 import pandas as pd
