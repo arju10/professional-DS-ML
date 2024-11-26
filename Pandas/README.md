@@ -1257,3 +1257,37 @@ print("Time series dataframe with time zone: \n", df)
 | 2023-01-07 19:00:00-05:00   | 350   |
 | 2023-01-08 19:00:00-05:00   | 300   |
 | 2023-01-09 19:00:00-05:00   | 400   |
+
+
+### Detecting and Replacing Outliers
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Values': [10,12,14,100,15,13,12]}
+df = pd.DataFrame(data)
+
+# Detecting Outliers using the IQR method
+Q1 = df['Values'].quantile(0.25)
+Q3 = df['Values'].quantile(0.75)
+
+IQR = Q3 - Q1
+outliers = (df['Values'] < (Q1-1.5 * IQR)) | (df['Values'] > (Q3 + 1.5 * IQR))
+
+# Replacing outliers with the median
+df.loc[outliers, 'Values'] = df['Values'].mean()
+
+print("Dataframe after Replacing outliers: \n", df)
+```
+***Output***
+`Dataframe after Replacing Outliers:`
+
+| Index |   Values   |
+|-------|------------|
+|   0   |  10.000000 |
+|   1   |  12.000000 |
+|   2   |  14.000000 |
+|   3   |  25.142857 |
+|   4   |  15.000000 |
+|   5   |  13.000000 |
+|   6   |  12.000000 |
