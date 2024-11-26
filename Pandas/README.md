@@ -1157,3 +1157,43 @@ print("Dataframe with custom rolling sum : \n", df)
 | 2023-01-08 | 350   | 1050.0      |
 | 2023-01-09 | 300   | 950.0       |
 | 2023-01-10 | 400   | 1050.0      |
+
+
+
+### Setting & Resetting Indexes
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'City':['NY', 'LA', 'NY','SF','LA'], 'Year':[2020,2020,2021,2021,2020], 'Sales':[100, 150, 200, 250,300]}
+df = pd.DataFrame(data)
+
+# Setting an index
+df.set_index('City', inplace=True)
+print("Dataframe after setting index: \n", df)
+print('\n')
+# Resetting index
+df.reset_index(inplace=True)
+print("Dataframe after resetting index: \n", df)
+```
+***Output***
+`DataFrame after Setting Index`
+
+| City | Year | Sales |
+|------|------|-------|
+| NY   | 2020 | 100   |
+| LA   | 2020 | 150   |
+| NY   | 2021 | 200   |
+| SF   | 2021 | 250   |
+| LA   | 2020 | 300   |
+
+`DataFrame after Resetting Index`
+
+| City | Year | Sales |
+|------|------|-------|
+| NY   | 2020 | 100   |
+| LA   | 2020 | 150   |
+| NY   | 2021 | 200   |
+| SF   | 2021 | 250   |
+| LA   | 2020 | 300   |
+
