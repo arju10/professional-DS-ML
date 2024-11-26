@@ -1565,3 +1565,27 @@ print('Unstacking dataframe \n', unstack_df)
 |-------|------|------|
 | NY    | 100  | 200  |
 | LA    | 500  | 450  |
+
+### Creating Custom Indexes with Multi-Index
+```python
+import pandas as pd
+
+# Create a multi-index from tuple
+index = pd.MultiIndex.from_tuples([('A',2020), ('A', 2021), ('B', 2021), ('C', 2022)], names=['Category', 'Year'])
+data = [100, 150, 200, 250]
+df = pd.DataFrame(data, index=index, columns=['Sales'])
+
+print("Dataframe with custom multi-index: \n", df)
+
+```
+***Output***
+`Dataframe with Custom Multi-Index:`
+
+| Category | Year | Sales |
+|----------|------|-------|
+| A        | 2020 | 100   |
+| A        | 2021 | 150   |
+| B        | 2021 | 200   |
+| C        | 2022 | 250   |
+
+
