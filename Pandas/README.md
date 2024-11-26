@@ -170,6 +170,47 @@ print("Dataframe after handling Missing values: \n", df)
 
 Here,missing values in the `Name` or `Age` columns were replaced with a default string (`"Unknown"`) or a specified numeric value.
 
+### Handling Missing Values with `ffilll` & `bfill` method
+```python
+import pandas as pd
+import numpy as np
+
+# Creating dataframe with missing values
+data = {'Name':['Alice', 'Bob', np.nan, 'David'], 'Age':[13,np.nan,32,20]}
+df = pd.DataFrame(data)
+
+# Filling Missing Values using ffill & bfill
+df_ffill = df.fillna(method = 'ffill')
+df_bfill = df.fillna(method = 'bfill')
+
+print("Dataframe with forward fill: \n", df_ffill)
+print("Dataframe with backwark fill: \n", df_bfill)
+
+```
+***Output***
+`DataFrame with Forward Fill`
+
+Forward fill propagates the last valid non-null value forward until the next non-null value is encountered.
+</br>
+
+| Name  | Age  |
+|-------|------|
+| Alice | 13.0 |
+| Bob   | 13.0 |
+| Bob   | 32.0 |
+| David | 20.0 |
+
+`DataFrame with Backward Fill`
+
+Backward fill propagates the next valid non-null value backward until the previous non-null value is encountered.
+</br>
+| Name  | Age  |
+|-------|------|
+| Alice | 13.0 |
+| Bob   | 32.0 |
+| David | 32.0 |
+| David | 20.0 |
+
 ### Pivoting DataFrame
 ```python
 import pandas as pd
