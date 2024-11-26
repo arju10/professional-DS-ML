@@ -214,6 +214,31 @@ print("Weekly Sales : \n", weekly_sales)
 | 2023-01-08 | 1950  |
 | 2023-01-15 | 700   |
 
+### Resampling with different aggregation
+```python
+import pandas as pd
+
+# Create time Series Dataframe
+date_range = pd.date_range(start='2023-01-01', periods=10, freq='D')
+data = {'Sales':[100, 200, 150, 300, 250, 400, 300, 350, 300, 400]}
+df = pd.DataFrame(data, index=date_range)
+
+# Resampling to find weekly sales
+resampled_df = df.resample('W').agg({'Sales':['sum', 'mean', 'max']})
+
+print("Resampled Dataframe with different aggregation : \n", resampled_df)
+```
+***Output***
+
+`Resampled DataFrame with Different Aggregation:`  
+
+| Date       | Sales (sum) | Sales (mean)   | Sales (max) |
+|------------|-------------|----------------|-------------|
+| 2023-01-01 | 100         | 100.000000     | 100         |
+| 2023-01-08 | 1950        | 278.571429     | 400         |
+| 2023-01-15 | 700         | 350.000000     | 400         |
+
+
 ### Conditional Filtering with Multiple Conditions
 ```python
 import pandas as pd
