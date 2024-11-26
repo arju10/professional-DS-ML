@@ -1291,3 +1291,27 @@ print("Dataframe after Replacing outliers: \n", df)
 |   4   |  15.000000 |
 |   5   |  13.000000 |
 |   6   |  12.000000 |
+
+### Dataframe with evaluated calculation
+```python
+import pandas as pd
+
+# Create a dataframe
+data = {'A':[1,2,3,4], 'B':[5,6,7,8]}
+df = pd.DataFrame(data)
+
+# Using eval for calculations
+df['C'] = df.eval('A + B *2')
+
+print("Dataframe with evaluated calculation\n",df) 
+```
+***Output***
+`Dataframe with Evaluated Calculation:`
+
+|   | A | B |  C |
+|---|---|---|----|
+| 0 | 1 | 5 | 11 |
+| 1 | 2 | 6 | 14 |
+| 2 | 3 | 7 | 17 |
+| 3 | 4 | 8 | 20 |
+
