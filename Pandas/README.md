@@ -195,6 +195,34 @@ print('Pivoted Dataframe : \n', pivot_df)
 | 2023-01-01 | 300  | 200  |
 | 2023-01-02 | 400  | 250  |
 
+### Pivoting DataFrame with multi index columns
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'Date':['2023-01-01', '2023-01-02','2023-01-01','2023-01-02'],
+        'City':['NY', 'NY','LA', 'LA'],
+        'Type': ['Online', 'Store', 'Online','Store'],
+        'Sales':[200,250,300,400]
+        }
+
+df = pd.DataFrame(data)
+
+# Pivoting to create a Dataframe with multi-index columns
+pivot_df = df.pivot(index='Date', columns=['City','Type'], values='Sales')
+
+print('Pivoted Dataframe with multi-index columns: \n', pivot_df)
+```
+***Output***
+
+`Pivoted DataFrame with Multi-Index Columns:`
+
+| Date       | City | NY        |       | LA        |       |
+|------------|------|-----------|-------|-----------|-------|
+|            | Type | Online    | Store | Online    | Store |
+| 2023-01-01 |      | 200.0     | NaN   | 300.0     | NaN   |
+| 2023-01-02 |      | NaN       | 250.0 | NaN       | 400.0 |
+
 ### Melting DataFrame
 ```python
 import pandas as pd
