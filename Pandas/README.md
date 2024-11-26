@@ -613,6 +613,39 @@ print("Dataframe with squared values : \n", df_transformed)
 
 In this example, the `scores` are ranked in `descending` order, with the highest score receiving the highest rank.
 
+### Using `df.apply()` with axis parameter
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'A': [1,2,3], 'B':[4,5,6]}
+df = pd.DataFrame(data)
+
+# Applying a function to rows and columns using the axis parameter
+row_sum = df.apply(lambda x: x.sum() , axis=1)
+col_sum = df.apply(lambda x: x.sum() , axis=0)
+
+print("Row wise sum : \n", row_sum)
+print("Column wise sum : \n", col_sum)
+
+```
+***Output***
+`Row-wise Sum:`
+
+|   | Sum |
+|---|-----|
+| 0 |  5  |
+| 1 |  7  |
+| 2 |  9  |
+
+`Column-wise Sum:`
+
+|   | Sum |
+|---|-----|
+| A |  6  |
+| B |  15 |
+
+
 ### Create dummy variables
 ```python
 import pandas as pd
