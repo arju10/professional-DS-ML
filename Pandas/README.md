@@ -1,3 +1,7 @@
+## Additional Resources
+[Pandas For Machine Learning & Deep Learning](https://dev.to/arju10/pandas-for-machine-learning-deep-learning-3gck)
+
+
 # Pandas
 
 ### Grouping & Aggregation
@@ -23,7 +27,8 @@ print("Grouped Data Frame with Aggregation: \n\n", grouped)
 
 ***Output:***
 
-`Grouped Data Frame with Aggregation:` </br> 
+`Grouped Data Frame with Aggregation:`
+
 | Category | Value (sum) | Value (mean) |
 |----------|-------------|--------------|
 | A        | 255         | 85.000000    |
@@ -86,6 +91,7 @@ sales_in_2020 = df.xs(2020, level='Year')
 print("Sales Data in 2020: ", sales_in_2020)
 ```
 ***Output***
+
 | Category | Sales (2020) |
 |----------|--------------|
 | A        | 100          |
@@ -108,6 +114,7 @@ df['Adjusted Score'] = df['Score'].apply(lambda x: x+5 if x<90 else x)
 print("Dataframe with Adjusted Scores :\n",df)
 ```
 ***Output***
+
 | Name     | Score | Adjusted Score |
 |----------|-------|----------------|
 | Alice    | 85    | 90             |
@@ -130,6 +137,7 @@ merged_df = pd.merge(df1, df2, left_on='ID', right_on='Emp_ID', how='outer')
 print("Merged Dataframe: \n", merged_df)
 ```
 ***Output***
+
 | ID  | Name    | Emp_ID | Department |
 |-----|---------|--------|------------|
 | 1.0 | Alice   | NaN    | NaN        |
@@ -160,7 +168,9 @@ df['Age'].fillna(df['Age'].median(), inplace=True)
 print("Dataframe after handling Missing values: \n", df)
 ```
 ***Output***
-`Dataframe after handling Missing values:` </br>
+
+`Dataframe after handling Missing values:` 
+
 | Name    | Age  |
 |---------|------|
 | Alice   | 13.0 |
@@ -191,7 +201,7 @@ print("Dataframe with backwark fill: \n", df_bfill)
 `DataFrame with Forward Fill`
 
 Forward fill propagates the last valid non-null value forward until the next non-null value is encountered.
-</br>
+
 
 | Name  | Age  |
 |-------|------|
@@ -200,16 +210,19 @@ Forward fill propagates the last valid non-null value forward until the next non
 | Bob   | 32.0 |
 | David | 20.0 |
 
+
 `DataFrame with Backward Fill`
 
 Backward fill propagates the next valid non-null value backward until the previous non-null value is encountered.
-</br>
+
+
 | Name  | Age  |
 |-------|------|
 | Alice | 13.0 |
 | Bob   | 32.0 |
 | David | 32.0 |
 | David | 20.0 |
+
 
 ### Pivoting DataFrame
 ```python
@@ -230,11 +243,13 @@ print('Pivoted Dataframe : \n', pivot_df)
 ```
 ***Output***
 
-`Pivoted Dataframe :` </br>
+`Pivoted Dataframe :` 
+
 | Date       | LA   | NY   |
 |------------|------|------|
 | 2023-01-01 | 300  | 200  |
 | 2023-01-02 | 400  | 250  |
+
 
 ### Pivoting DataFrame with multi index columns
 ```python
@@ -279,7 +294,7 @@ print("Melted Dataframe : \n", melted_dataframe)
 ```
 ***Output***
 
-`Melted DataFrame :` </br>
+`Melted DataFrame :` 
 
 | ID  | Subject | Score |
 |-----|---------|-------|
@@ -304,7 +319,7 @@ print("Weekly Sales : \n", weekly_sales)
 ```
 ***Output***
 
-`Weekly Sales :` </br>
+`Weekly Sales :` 
 
 | Date       | Sales |
 |------------|-------|
@@ -353,6 +368,7 @@ print("FIltered Dataframe : \n", filtered_df)
 ***Output***
 
 `Example Filtered DataFrame : `
+
 | Name  | Score | Passed |
 |-------|-------|--------|
 | Alice | 85    | True   |
@@ -421,7 +437,8 @@ df['Rolling Mean'] = df['Sales'].rolling(window=3).mean()
 print("Dataframe with rolling mean : \n", df)
 ```
 ***Output***
-`DataFrame with Rolling Mean : ` </br>
+
+`DataFrame with Rolling Mean : ` 
 
 | Date       | Sales | Rolling Mean |
 |------------|-------|--------------|
@@ -736,7 +753,9 @@ print("Column wise sum : \n", col_sum)
 | 1 |  7  |
 | 2 |  9  |
 
+
 `Column-wise Sum:`
+
 
 |   | Sum |
 |---|-----|
@@ -1124,7 +1143,9 @@ print("Dataframe with Suffix :\n", df_suffixed)
 | 0     | 90         | 85            |
 | 1     | 80         | 88            |
 
+
 ` DataFrame with Suffix`
+
 
 | Index | Math_Score | Science_Score |
 |-------|------------|---------------|
@@ -1250,7 +1271,8 @@ print('Pivoted Dataframe with fill_value: \n', pivot_df)
 ```
 ***Output***
 
-`Pivoted Dataframe with fill_value:` </br>
+`Pivoted Dataframe with fill_value:` 
+
 | Date       | LA    | NY    |
 |------------|-------|-------|
 | 2023-01-01 | 300.0 | 200.0 |
