@@ -714,6 +714,33 @@ print("Custom Aggregation result : \n", grouped_df)
 
 In this example, the `Value` column is aggregated using a custom function (such as summing specific elements) for each category.
 
+### Applying functions to grouped data
+```python
+import pandas as pd
+
+# Create dataframe
+data = {
+    'Team':['A','A','B','B'],
+    'Points':[10, 20, 30,40]
+}
+df = pd.DataFrame(data)
+
+# Applying a function to grouped data
+grouped_df = df.groupby('Team') ['Points'].transform(lambda x: x/x.max() )
+
+print("Dataframe with applied functions to grouped data : \n", grouped_df)
+```
+***Output***
+`Dataframe with Applied Functions to Grouped Data:`
+
+|   | Points |
+|---|--------|
+| 0 |  0.50  |
+| 1 |  1.00  |
+| 2 |  0.75  |
+| 3 |  1.00  |
+
+
 ### DataFrame info and memory usage
 ```python
 import pandas as pd
