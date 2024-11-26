@@ -1485,3 +1485,42 @@ print("Time series Dataframe with business days : \n", df)
 | 2023-01-11 |   7   |
 | 2023-01-12 |   8   |
 | 2023-01-13 |   9   |
+
+### Stacking & Unstacking dataframe
+```python
+import pandas as pd
+
+# Create dataframe
+data = {'City':['NY','LA'],
+        '2020':[100,500],
+        '2021':[200,450],
+        }
+
+df = pd.DataFrame(data)
+
+# Stacking & Unstacking dataframe
+stack_df = df.stack()
+unstack_df = df.unstack()
+
+print('Stacking dataframe \n', stack_df)
+print('Unstacking dataframe \n', unstack_df)
+```
+***Output***
+`Stacked DataFrame:`
+
+| Level 0 | Level 1 | Value |
+|---------|---------|-------|
+| 0       | City    | NY    |
+|         | 2020    | 100   |
+|         | 2021    | 200   |
+| 1       | City    | LA    |
+|         | 2020    | 500   |
+|         | 2021    | 450   |
+
+
+`Unstacked DataFrame:`
+
+| City  | 2020 | 2021 |
+|-------|------|------|
+| NY    | 100  | 200  |
+| LA    | 500  | 450  |
